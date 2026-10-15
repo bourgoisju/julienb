@@ -9,7 +9,16 @@ $script:passes = 0
 
 function Check([string]$name, [bool]$ok, [string]$detail = '') {
   if ($ok) { $script:passes++; Write-Host "  ok    $name" -ForegroundColor Green }
-  else { $script:failures++; Write-Host "  FAIL  $name $detail" -ForegroundColor Red }
+  else {
+    $script:failures++; Write-Host "  FAIL  $name $detail" -ForegroundColor Red
+    # On GitHub Actions, also surface the failure as an annotation on the run summary.
+    if ($env:GITHUB_ACTIONS) { Write-Host "::error title=Test du site::$name $detail" }
+  }
+}
+trap {
+  if ($env:GITHUB_ACTIONS) { Write-Host "::error title=Erreur du script de test::$($_.Exception.Message) (ligne $($_.InvocationInfo.ScriptLineNumber))" }
+  Write-Host "ERROR $($_.Exception.Message)" -ForegroundColor Red
+  exit 99
 }
 function Read-Utf8([string]$path) { [IO.File]::ReadAllText((Join-Path $root $path), [Text.Encoding]::UTF8) }
 
