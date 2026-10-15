@@ -6,8 +6,8 @@
   <title>Julien Bourgois — Sites web réalisés</title>
   <meta name="description" content="Les sites web réalisés par Julien Bourgois : intégrateur audiovisuel, auto-école, ostéopathe, autrice. Sites vitrines sur mesure, rapides, pensés pour le mobile.">
   <link rel="canonical" href="https://julienb.vercel.app/">
-  <meta name="theme-color" content="#f5f2ec" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f4ff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0a10" media="(prefers-color-scheme: dark)">
   <!-- Before first paint: saved theme + opt-in to motion (removed again if main.js never boots). -->
   <script>(()=>{const d=document.documentElement;try{const t=localStorage.getItem('theme');if(t==='light'||t==='dark')d.dataset.theme=t}catch(e){}if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('motion');setTimeout(()=>{if(!d.classList.contains('is-ready'))d.classList.remove('motion')},2500)}})()</script>
 
@@ -29,7 +29,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script type="module" src="assets/js/main.js"></script>
 
@@ -82,20 +82,32 @@
   </header>
 
   <main id="main">
+    <!-- Animated backdrop: three drifting colour blobs + a faint grid -->
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+    <div class="grid-lines" aria-hidden="true"></div>
+
     <!-- HERO -->
     <section class="hero container" id="top" data-reveal>
       <p class="eyebrow reveal" style="--i:0">Sites web · conception &amp; réalisation</p>
       <h1>
         <span class="line"><span style="--i:0">Des sites faits</span></span>
-        <span class="line"><span style="--i:1"><em>sur mesure</em>, pour</span></span>
+        <span class="line"><span style="--i:1"><em class="grad">sur mesure</em>, pour</span></span>
         <span class="line"><span style="--i:2">des métiers réels.</span></span>
       </h1>
       <p class="lead reveal" style="--i:4">Artisan, auto-école, thérapeute, autrice : chaque site part du métier de la personne qu'il présente. Voici ceux que j'ai construits, à parcourir en direct.</p>
       <div class="hero-foot reveal" style="--i:5">
-        <p class="hero-count"><strong data-site-count>4</strong> sites en ligne</p>
-        <a class="link-arrow" href="#sites">Voir les réalisations <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+        <a class="btn btn-primary" href="#sites" data-magnetic>Voir les réalisations <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+        <p class="hero-count"><strong data-site-count data-count-up>4</strong> sites en ligne</p>
       </div>
     </section>
+
+    <!-- Sectors band (decorative: the same words are in the project cards) -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Électricité</span><span>audiovisuel</span><span>Auto-école</span><span>santé</span><span>Ostéopathie</span><span>édition</span><span>Psychologie</span><span>sur mesure</span>
+        <span>Électricité</span><span>audiovisuel</span><span>Auto-école</span><span>santé</span><span>Ostéopathie</span><span>édition</span><span>Psychologie</span><span>sur mesure</span>
+      </div>
+    </div>
 
     <!-- REALISATIONS
          Pour ajouter un site : capture 1440×900 en JPEG (nom-720.jpg et nom-1440.jpg dans assets/img/),
@@ -103,19 +115,19 @@
          Penser aussi au JSON-LD en haut de page et à frame-src dans vercel.json. -->
     <section class="section" id="sites" aria-labelledby="sites-title">
       <div class="container">
-        <h2 id="sites-title" class="section-title reveal">Réalisations <span data-site-count-label>4 projets</span></h2>
+        <h2 id="sites-title" class="section-title reveal">Réalisations<span data-site-count-label>4 projets</span></h2>
 
         <ol class="projects">
           <li class="project" data-reveal>
-            <a class="project-shot" href="https://emconcept.vercel.app" target="_blank" rel="noopener" data-preview
+            <div class="project-shot-wrap"><a class="project-shot" href="https://emconcept.vercel.app" target="_blank" rel="noopener" data-preview
                data-title="EM Concept" data-meta="Électricité &amp; audiovisuel · Var">
-              <img src="assets/img/emconcept-720.jpg"
+              <span class="project-shot-img"><img src="assets/img/emconcept-720.jpg"
                    srcset="assets/img/emconcept-720.jpg 720w, assets/img/emconcept-1440.jpg 1440w"
                    sizes="(max-width: 860px) 100vw, 680px"
                    width="1440" height="900" loading="lazy" decoding="async"
-                   alt="Page d'accueil d'EM Concept : titre « Tout se voit. Rien ne dépasse. » sur une chambre plongée dans la pénombre">
+                   alt="Page d'accueil d'EM Concept : titre « Tout se voit. Rien ne dépasse. » sur une chambre plongée dans la pénombre"></span>
               <span class="project-shot-label">Aperçu en direct</span>
-            </a>
+            </a></div>
             <div class="project-body">
               <p class="project-meta reveal" style="--i:1"><span class="project-num">01</span>Électricité &amp; audiovisuel · Var</p>
               <h3 class="reveal" style="--i:2">EM Concept</h3>
@@ -128,15 +140,15 @@
           </li>
 
           <li class="project" data-reveal>
-            <a class="project-shot" href="https://autoecole-smoky.vercel.app" target="_blank" rel="noopener" data-preview
+            <div class="project-shot-wrap"><a class="project-shot" href="https://autoecole-smoky.vercel.app" target="_blank" rel="noopener" data-preview
                data-title="Auto-école La Tour de Mare" data-meta="Auto-école · Fréjus">
-              <img src="assets/img/autoecole-720.jpg"
+              <span class="project-shot-img"><img src="assets/img/autoecole-720.jpg"
                    srcset="assets/img/autoecole-720.jpg 720w, assets/img/autoecole-1440.jpg 1440w"
                    sizes="(max-width: 860px) 100vw, 680px"
                    width="1440" height="900" loading="lazy" decoding="async"
-                   alt="Page d'accueil de l'auto-école La Tour de Mare : « Passez votre permis dans une auto-école qui a fait ses preuves »">
+                   alt="Page d'accueil de l'auto-école La Tour de Mare : « Passez votre permis dans une auto-école qui a fait ses preuves »"></span>
               <span class="project-shot-label">Aperçu en direct</span>
-            </a>
+            </a></div>
             <div class="project-body">
               <p class="project-meta reveal" style="--i:1"><span class="project-num">02</span>Auto-école · Fréjus</p>
               <h3 class="reveal" style="--i:2">Auto-école La Tour de Mare</h3>
@@ -149,15 +161,15 @@
           </li>
 
           <li class="project" data-reveal>
-            <a class="project-shot" href="https://osteoflo.vercel.app" target="_blank" rel="noopener" data-preview
+            <div class="project-shot-wrap"><a class="project-shot" href="https://osteoflo.vercel.app" target="_blank" rel="noopener" data-preview
                data-title="Florian Bozzetti, ostéopathe" data-meta="Santé · Puget-sur-Argens">
-              <img src="assets/img/osteoflo-720.jpg"
+              <span class="project-shot-img"><img src="assets/img/osteoflo-720.jpg"
                    srcset="assets/img/osteoflo-720.jpg 720w, assets/img/osteoflo-1440.jpg 1440w"
                    sizes="(max-width: 860px) 100vw, 680px"
                    width="1440" height="900" loading="lazy" decoding="async"
-                   alt="Page d'accueil du cabinet de Florian Bozzetti : « Retrouver un corps libre de ses mouvements » et encart des horaires">
+                   alt="Page d'accueil du cabinet de Florian Bozzetti : « Retrouver un corps libre de ses mouvements » et encart des horaires"></span>
               <span class="project-shot-label">Aperçu en direct</span>
-            </a>
+            </a></div>
             <div class="project-body">
               <p class="project-meta reveal" style="--i:1"><span class="project-num">03</span>Santé · Puget-sur-Argens</p>
               <h3 class="reveal" style="--i:2">Florian Bozzetti, ostéopathe</h3>
@@ -170,15 +182,15 @@
           </li>
 
           <li class="project" data-reveal>
-            <a class="project-shot" href="https://annick-taquet-assoignons.vercel.app" target="_blank" rel="noopener" data-preview
+            <div class="project-shot-wrap"><a class="project-shot" href="https://annick-taquet-assoignons.vercel.app" target="_blank" rel="noopener" data-preview
                data-title="Annick Taquet-Assoignons" data-meta="Psychologue &amp; autrice">
-              <img src="assets/img/taquet-720.jpg"
+              <span class="project-shot-img"><img src="assets/img/taquet-720.jpg"
                    srcset="assets/img/taquet-720.jpg 720w, assets/img/taquet-1440.jpg 1440w"
                    sizes="(max-width: 860px) 100vw, 680px"
                    width="1440" height="900" loading="lazy" decoding="async"
-                   alt="Page d'accueil d'Annick Taquet-Assoignons : « Mettre des mots sur ce qui se vit » entouré de couvertures de livres">
+                   alt="Page d'accueil d'Annick Taquet-Assoignons : « Mettre des mots sur ce qui se vit » entouré de couvertures de livres"></span>
               <span class="project-shot-label">Aperçu en direct</span>
-            </a>
+            </a></div>
             <div class="project-body">
               <p class="project-meta reveal" style="--i:1"><span class="project-num">04</span>Psychologue &amp; autrice</p>
               <h3 class="reveal" style="--i:2">Annick Taquet-Assoignons</h3>
@@ -222,7 +234,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-cta" data-reveal>
-        <p class="reveal">Le prochain site sera peut-être <em>le vôtre</em>.</p>
+        <p class="reveal">Le prochain site sera peut-être <em class="grad">le vôtre</em>.</p>
       </div>
       <div class="footer-inner">
         <p>© <span data-year>2026</span> Julien Bourgois</p>

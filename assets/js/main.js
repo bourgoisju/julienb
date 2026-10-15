@@ -3,6 +3,7 @@ import { initTheme } from './theme.js';
 import { initHeader, initReveal, initParallax } from './motion.js';
 import { initPreview } from './preview.js';
 import { initCursor } from './cursor.js';
+import { initTilt, initSpotlight, initMagnetic, initCountUp } from './effects.js';
 
 const root = document.documentElement;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -21,6 +22,10 @@ initPreview();
 if (!reducedMotion.matches) {
   initParallax();
   initCursor();
+  initTilt();
+  initSpotlight();
+  initMagnetic();
+  initCountUp();
 }
 
 // Tells the inline head script that motion can stay on.

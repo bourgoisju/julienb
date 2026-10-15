@@ -4,8 +4,8 @@
   "lang": "fr",
   "start_url": "./",
   "display": "browser",
-  "background_color": "#f5f2ec",
-  "theme_color": "#f5f2ec",
+  "background_color": "#0b0a10",
+  "theme_color": "#0b0a10",
   "icons": [
     { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
     { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }

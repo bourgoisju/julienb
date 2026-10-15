@@ -9,7 +9,7 @@ function apply(theme, button) {
   document.documentElement.dataset.theme = theme;
   button.setAttribute('aria-label', theme === 'dark' ? 'Passer en thème clair' : 'Passer en thème sombre');
   const meta = document.querySelectorAll('meta[name="theme-color"]');
-  meta.forEach((m) => m.setAttribute('content', theme === 'dark' ? '#161513' : '#f5f2ec'));
+  meta.forEach((m) => m.setAttribute('content', theme === 'dark' ? '#0b0a10' : '#f6f4ff'));
 }
 
 export function initTheme() {
