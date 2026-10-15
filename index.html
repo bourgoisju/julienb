@@ -43,6 +43,8 @@
         "name": "Julien Bourgois",
         "url": "https://julienb.vercel.app/",
         "jobTitle": "Créateur de sites web",
+        "telephone": "+33674887585",
+        "email": "bourgois.ju@gmail.com",
         "sameAs": ["https://github.com/bourgoisju"]
       },
       {
@@ -64,7 +66,7 @@
 
   <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">jb</span>Julien Bourgois</a>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">jb</span><span class="brand-name">Julien Bourgois</span></a>
       <div class="header-end">
         <nav aria-label="Navigation principale">
           <ul class="nav" data-nav>
@@ -72,6 +74,7 @@
             <li><a href="#demarche">Démarche</a></li>
           </ul>
         </nav>
+        <a class="btn btn-primary btn-sm" href="#contact" data-magnetic>Me contacter</a>
         <button class="icon-btn" type="button" data-theme-toggle aria-label="Passer en thème sombre">
           <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"/></svg>
           <svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"/></svg>
@@ -233,9 +236,24 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-cta" data-reveal>
-        <p class="reveal">Le prochain site sera peut-être <em class="grad">le vôtre</em>.</p>
-      </div>
+      <section class="footer-cta" id="contact" aria-labelledby="contact-title" data-reveal>
+        <h2 id="contact-title" class="reveal">Le prochain site sera peut-être <em class="grad">le vôtre</em>.</h2>
+        <p class="contact-lead reveal" style="--i:1">Un projet, une question, une envie de refaire votre site ? Appelez-moi ou écrivez-moi, je vous réponds rapidement.</p>
+        <ul class="contact-list reveal" style="--i:2">
+          <li>
+            <a class="contact-card" href="tel:+33674887585" data-magnetic>
+              <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#i-phone"/></svg></span>
+              <span><small>Téléphone</small> 06 74 88 75 85</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-card" href="mailto:bourgois.ju@gmail.com?subject=Projet%20de%20site%20web" data-magnetic>
+              <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#i-mail"/></svg></span>
+              <span><small>E-mail</small> bourgois.ju@gmail.com</span>
+            </a>
+          </li>
+        </ul>
+      </section>
       <div class="footer-inner">
         <p>© <span data-year>2026</span> Julien Bourgois</p>
         <a href="#top">Haut de page ↑</a>
@@ -277,6 +295,8 @@
     <symbol id="i-arrow-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-arrow-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
     <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></g></symbol>
     <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M18 6 6 18M6 6l12 12"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>

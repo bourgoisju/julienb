@@ -206,6 +206,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   animation: grad-shift 6s ease-in-out infinite;
 }
 .btn-primary:hover { box-shadow: 0 16px 40px -10px var(--pink); }
+.btn-sm { min-height: 40px; padding: 0 16px; white-space: nowrap; }
 .icon-btn {
   display: inline-grid; place-items: center; width: 44px; height: 44px;
   border-radius: 999px; border: 1px solid var(--line); background: none;
@@ -234,7 +235,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .site-header.is-scrolled { border-bottom-color: var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: var(--header-h); }
-.brand { display: inline-flex; align-items: center; gap: 10px; font: 700 1.1rem var(--display); letter-spacing: -.02em; text-decoration: none; }
+.brand { white-space: nowrap; display: inline-flex; align-items: center; gap: 10px; font: 700 1.1rem var(--display); letter-spacing: -.02em; text-decoration: none; }
 .brand-mark {
   display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px;
   background: var(--grad); background-size: 200% 100%; color: var(--on-grad);
@@ -409,7 +410,25 @@ main { position: relative; isolation: isolate; }
 /* Footer */
 .site-footer { position: relative; overflow: hidden; border-top: 1px solid var(--line); }
 .footer-cta { padding-block: var(--section) 56px; }
-.footer-cta p { font: 800 clamp(2.6rem, 8vw, 7rem)/.95 var(--display); letter-spacing: -.05em; max-width: 14ch; }
+.footer-cta h2 { font: 800 clamp(2.6rem, 8vw, 7rem)/.95 var(--display); letter-spacing: -.05em; max-width: 14ch; }
+.contact-lead { margin-top: 28px; max-width: 48ch; font-size: var(--fs-lg); color: var(--muted); }
+.contact-list { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+.contact-card {
+  display: flex; align-items: center; gap: 16px; min-width: min(100%, 320px);
+  padding: 16px 24px 16px 16px; border-radius: 999px; text-decoration: none;
+  background: var(--surface); border: 1px solid var(--line-strong);
+  transform: translate(var(--tx, 0), var(--ty, 0));
+  transition: transform var(--dur-base) var(--ease-out), border-color var(--dur-fast), box-shadow var(--dur-base);
+}
+.contact-card:hover { border-color: var(--accent); box-shadow: 0 16px 40px -16px var(--glow); }
+.contact-card small { display: block; font-size: var(--fs-xs); color: var(--muted); letter-spacing: .02em; }
+.contact-card > span:last-child { font: 700 clamp(1.15rem, 2.2vw, 1.5rem)/1.2 var(--display); letter-spacing: -.02em; overflow-wrap: anywhere; }
+.contact-icon {
+  display: inline-grid; place-items: center; width: 52px; height: 52px; flex: none; border-radius: 50%;
+  background: var(--grad); background-size: 200% 100%; color: var(--on-grad);
+  animation: grad-shift 6s ease-in-out infinite;
+}
+.contact-icon .icon { width: 22px; height: 22px; }
 .footer-cta em { font-family: var(--serif); font-weight: 400; letter-spacing: -.02em; }
 .footer-cta .grad { animation: grad-shift 6s ease-in-out infinite; }
 .footer-inner {
@@ -517,16 +536,23 @@ main { position: relative; isolation: isolate; }
   .project:nth-child(even) .project-shot-wrap { order: 0; }
 }
 @media (max-width: 760px) {
+  .nav { display: none; }
   .preview-device { display: none; }
   .preview-bar { gap: 4px; padding-inline: 16px 8px; }
   .preview-open-label { display: none; }
   .preview-bar .btn { width: 44px; padding: 0; border-color: transparent; background: none; }
 }
 @media (max-width: 600px) {
-  .nav { display: none; }
   .principles { grid-template-columns: 1fr; }
   .principles li::before { margin-bottom: 24px; }
+  .header-end { gap: 8px; }
+  .contact-list li { flex: 1 1 100%; }
+  .contact-card { width: 100%; }
   .section-title { flex-direction: column; align-items: start; }
   .footer-inner { flex-direction: column; }
   .grid-lines { background-size: 48px 48px; }
+}
+@media (max-width: 420px) {
+  /* Keep the name for screen readers, show only the "jb" mark. */
+  .brand-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
