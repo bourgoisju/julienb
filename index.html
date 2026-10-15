@@ -90,17 +90,58 @@
     <div class="grid-lines" aria-hidden="true"></div>
 
     <!-- HERO -->
-    <section class="hero container" id="top" data-reveal>
-      <p class="eyebrow reveal" style="--i:0">Sites web · conception &amp; réalisation</p>
-      <h1>
-        <span class="line"><span style="--i:0">Des sites faits</span></span>
-        <span class="line"><span style="--i:1"><em class="grad">sur mesure</em>, pour</span></span>
-        <span class="line"><span style="--i:2">des métiers réels.</span></span>
-      </h1>
-      <p class="lead reveal" style="--i:4">Artisan, auto-école, thérapeute, autrice : chaque site part du métier de la personne qu'il présente. Voici ceux que j'ai construits, à parcourir en direct.</p>
-      <div class="hero-foot reveal" style="--i:5">
-        <a class="btn btn-primary" href="#sites" data-magnetic>Voir les réalisations <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
-        <p class="hero-count"><strong data-site-count data-count-up>4</strong> sites en ligne</p>
+    <!-- HERO — « Une vitrine vivante » : the promise on the left, the real work floating on the right.
+         assets/js/hero.js cycles the stack, follows the pointer and links scroll to depth. -->
+    <section class="hero container" id="top" data-reveal data-hero>
+      <div class="hero-copy">
+        <p class="eyebrow reveal" style="--i:0">Studio web indépendant · Julien Bourgois</p>
+        <h1>
+          <span class="line"><span style="--i:0">Votre métier</span></span>
+          <span class="line"><span style="--i:1">mérite un site</span></span>
+          <span class="line"><span style="--i:2"><em class="grad">qui vous ressemble.</em></span></span>
+        </h1>
+        <p class="lead reveal" style="--i:4">Je conçois et développe des <strong>sites vitrines sur mesure</strong> pour les artisans, commerces et indépendants : une identité qui vous est propre, un site rapide, et des visiteurs qui vous appellent en un geste depuis leur téléphone.</p>
+        <div class="hero-actions reveal" style="--i:5">
+          <a class="btn btn-primary btn-lg" href="#contact" data-magnetic>Parlons de votre projet <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          <a class="link-arrow" href="#sites">Voir les réalisations <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+        </div>
+        <ul class="hero-proof reveal" style="--i:6">
+          <li><strong data-site-count data-count-up>4</strong> sites en ligne</li>
+          <li><strong>100 %</strong> sur mesure</li>
+          <li><strong>0</strong> modèle tout fait</li>
+        </ul>
+      </div>
+
+      <div class="hero-stage">
+        <div class="stage-light" aria-hidden="true"></div>
+        <div class="stage-grain" aria-hidden="true"></div>
+        <div class="stack-scene" aria-hidden="true">
+          <div class="stack-tilt">
+            <div class="stack" data-stack>
+              <figure class="stack-card" data-pos="0" data-glow="#3fb6e0" data-name="EM Concept" data-meta="Électricité &amp; audiovisuel · Var" data-target="0">
+                <img src="assets/img/emconcept-720.jpg" width="720" height="450" fetchpriority="high" decoding="async" alt="">
+              </figure>
+              <figure class="stack-card" data-pos="1" data-glow="#2f5bff" data-name="Auto-école La Tour de Mare" data-meta="Auto-école · Fréjus" data-target="1">
+                <img src="assets/img/autoecole-720.jpg" width="720" height="450" decoding="async" alt="">
+              </figure>
+              <figure class="stack-card" data-pos="2" data-glow="#3f8f6b" data-name="Florian Bozzetti" data-meta="Ostéopathe · Puget-sur-Argens" data-target="2">
+                <img src="assets/img/osteoflo-720.jpg" width="720" height="450" decoding="async" alt="">
+              </figure>
+              <figure class="stack-card" data-pos="3" data-glow="#b0508a" data-name="Annick Taquet-Assoignons" data-meta="Psychologue &amp; autrice" data-target="3">
+                <img src="assets/img/taquet-720.jpg" width="720" height="450" decoding="async" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="stack-ui reveal" style="--i:6">
+          <p class="stack-caption" aria-hidden="true"><b data-stack-num>01</b><span><span data-stack-name>EM Concept</span><small data-stack-meta>Électricité &amp; audiovisuel · Var</small></span></p>
+          <div class="stack-dots" role="group" aria-label="Choisir la réalisation affichée">
+            <button type="button" aria-pressed="true" aria-label="EM Concept" data-stack-go="0"></button>
+            <button type="button" aria-pressed="false" aria-label="Auto-école La Tour de Mare" data-stack-go="1"></button>
+            <button type="button" aria-pressed="false" aria-label="Florian Bozzetti, ostéopathe" data-stack-go="2"></button>
+            <button type="button" aria-pressed="false" aria-label="Annick Taquet-Assoignons" data-stack-go="3"></button>
+          </div>
+        </div>
       </div>
     </section>
 

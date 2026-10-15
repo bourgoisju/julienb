@@ -4,6 +4,7 @@ import { initHeader, initReveal, initParallax } from './motion.js';
 import { initPreview } from './preview.js';
 import { initCursor } from './cursor.js';
 import { initTilt, initSpotlight, initMagnetic, initCountUp } from './effects.js';
+import { initHero } from './hero.js';
 
 const root = document.documentElement;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -19,6 +20,7 @@ initTheme();
 initHeader();
 initReveal();
 initPreview();
+initHero({ motion: !reducedMotion.matches });
 if (!reducedMotion.matches) {
   initParallax();
   initCursor();
