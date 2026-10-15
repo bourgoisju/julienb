@@ -107,12 +107,12 @@ if (-not $SkipBrowser) {
       Check 'local server starts' $up
       if ($up) {
         $profile = Join-Path $env:TEMP "site-test-$Port"
-        $dom = & $chrome --headless=new --disable-gpu --no-first-run --user-data-dir="$profile" --virtual-time-budget=4000 --dump-dom "http://localhost:$Port/" 2>$null | Out-String
+        $dom = & $chrome --headless=new --disable-gpu --no-first-run --user-data-dir="$profile" --window-size=1280,900 --run-all-compositor-stages-before-draw --virtual-time-budget=10000 --dump-dom "http://localhost:$Port/" 2>$null | Out-String
         Check 'JavaScript modules boot without error (html.is-ready)' ($dom -match '<html[^>]*class="[^"]*is-ready')
         Check 'project counter filled by JS' ($dom -match "data-site-count-label=`"`">$projects projets<")
         Check 'theme toggle labelled by JS' ($dom -match 'data-theme-toggle="" aria-label="Passer en th[^"]{1,3}me (sombre|clair)"')
         Check 'hero revealed' ($dom -match 'class="hero container is-visible"')
-        $mobile = & $chrome --headless=new --disable-gpu --no-first-run --user-data-dir="$profile" --window-size=375,812 --virtual-time-budget=3000 --run-all-compositor-stages-before-draw --dump-dom "http://localhost:$Port/" 2>$null | Out-String
+        $mobile = & $chrome --headless=new --disable-gpu --no-first-run --user-data-dir="$profile" --window-size=375,812 --virtual-time-budget=10000 --run-all-compositor-stages-before-draw --dump-dom "http://localhost:$Port/" 2>$null | Out-String
         Check 'page renders at phone width' ($mobile -match 'is-ready')
       }
     } finally {
