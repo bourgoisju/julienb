@@ -4,115 +4,189 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Julien Bourgois — Sites web réalisés</title>
-  <meta name="description" content="Les sites web conçus et réalisés par Julien Bourgois : intégrateur audiovisuel, auto-école, ostéopathe, psychologue et autrice.">
-  <meta name="theme-color" content="#f5f2ec">
-  <script>document.documentElement.classList.add('js')</script>
+  <meta name="description" content="Les sites web réalisés par Julien Bourgois : intégrateur audiovisuel, auto-école, ostéopathe, autrice. Sites vitrines sur mesure, rapides, pensés pour le mobile.">
+  <link rel="canonical" href="https://julienb.vercel.app/">
+  <meta name="theme-color" content="#f5f2ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
+  <!-- Before first paint: saved theme + opt-in to motion (removed again if main.js never boots). -->
+  <script>(()=>{const d=document.documentElement;try{const t=localStorage.getItem('theme');if(t==='light'||t==='dark')d.dataset.theme=t}catch(e){}if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('motion');setTimeout(()=>{if(!d.classList.contains('is-ready'))d.classList.remove('motion')},2500)}})()</script>
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Julien Bourgois">
   <meta property="og:title" content="Julien Bourgois — Sites web réalisés">
-  <meta property="og:description" content="Sites vitrines sur mesure, rapides et pensés pour le mobile.">
+  <meta property="og:description" content="Sites vitrines sur mesure, rapides et pensés pour le mobile : artisan, auto-école, ostéopathe, autrice.">
+  <meta property="og:url" content="https://julienb.vercel.app/">
+  <meta property="og:image" content="https://julienb.vercel.app/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aperçu de quatre sites réalisés par Julien Bourgois">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://julienb.vercel.app/#julien",
+        "name": "Julien Bourgois",
+        "url": "https://julienb.vercel.app/",
+        "jobTitle": "Créateur de sites web",
+        "sameAs": ["https://github.com/bourgoisju"]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Sites web réalisés par Julien Bourgois",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "WebSite", "name": "EM Concept", "url": "https://emconcept.vercel.app/", "creator": { "@id": "https://julienb.vercel.app/#julien" } } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "WebSite", "name": "Auto-école La Tour de Mare", "url": "https://autoecole-smoky.vercel.app/", "creator": { "@id": "https://julienb.vercel.app/#julien" } } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "WebSite", "name": "Florian Bozzetti, ostéopathe", "url": "https://osteoflo.vercel.app/", "creator": { "@id": "https://julienb.vercel.app/#julien" } } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "WebSite", "name": "Annick Taquet-Assoignons", "url": "https://annick-taquet-assoignons.vercel.app/", "creator": { "@id": "https://julienb.vercel.app/#julien" } } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
 
-  <header class="site-header">
+  <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="#top">Julien Bourgois</a>
-      <nav aria-label="Navigation principale">
-        <ul class="nav">
-          <li><a href="#sites">Réalisations</a></li>
-          <li><a href="#demarche">Démarche</a></li>
-        </ul>
-      </nav>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">jb</span>Julien Bourgois</a>
+      <div class="header-end">
+        <nav aria-label="Navigation principale">
+          <ul class="nav" data-nav>
+            <li><a href="#sites">Réalisations</a></li>
+            <li><a href="#demarche">Démarche</a></li>
+          </ul>
+        </nav>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Passer en thème sombre">
+          <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+      </div>
     </div>
+    <span class="scroll-progress" aria-hidden="true" data-progress></span>
   </header>
 
   <main id="main">
     <!-- HERO -->
-    <section class="hero container" id="top">
-      <p class="eyebrow reveal">Sites web · conception &amp; réalisation</p>
-      <h1 class="reveal">Des sites faits <em>sur mesure</em>, pour des métiers bien réels.</h1>
-      <p class="lead reveal">Artisan, auto-école, thérapeute, autrice : chaque site part du métier de la personne qu'il présente. Voici ceux que j'ai construits.</p>
-      <p class="hero-count reveal"><strong data-site-count>4</strong> sites en ligne</p>
+    <section class="hero container" id="top" data-reveal>
+      <p class="eyebrow reveal" style="--i:0">Sites web · conception &amp; réalisation</p>
+      <h1>
+        <span class="line"><span style="--i:0">Des sites faits</span></span>
+        <span class="line"><span style="--i:1"><em>sur mesure</em>, pour</span></span>
+        <span class="line"><span style="--i:2">des métiers réels.</span></span>
+      </h1>
+      <p class="lead reveal" style="--i:4">Artisan, auto-école, thérapeute, autrice : chaque site part du métier de la personne qu'il présente. Voici ceux que j'ai construits, à parcourir en direct.</p>
+      <div class="hero-foot reveal" style="--i:5">
+        <p class="hero-count"><strong data-site-count>4</strong> sites en ligne</p>
+        <a class="link-arrow" href="#sites">Voir les réalisations <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+      </div>
     </section>
 
     <!-- REALISATIONS
          Pour ajouter un site : capture 1440×900 en JPEG (nom-720.jpg et nom-1440.jpg dans assets/img/),
-         puis copier un bloc <li class="project"> et changer le numéro, les textes et le lien. -->
+         puis copier un bloc <li class="project">, changer le numéro, les textes, les images et data-preview / href.
+         Penser aussi au JSON-LD en haut de page et à frame-src dans vercel.json. -->
     <section class="section" id="sites" aria-labelledby="sites-title">
       <div class="container">
-        <h2 id="sites-title" class="section-title reveal">Réalisations</h2>
+        <h2 id="sites-title" class="section-title reveal">Réalisations <span data-site-count-label>4 projets</span></h2>
 
         <ol class="projects">
-          <li class="project reveal">
-            <a class="project-shot" href="https://emconcept.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <li class="project" data-reveal>
+            <a class="project-shot" href="https://emconcept.vercel.app" target="_blank" rel="noopener" data-preview
+               data-title="EM Concept" data-meta="Électricité &amp; audiovisuel · Var">
               <img src="assets/img/emconcept-720.jpg"
                    srcset="assets/img/emconcept-720.jpg 720w, assets/img/emconcept-1440.jpg 1440w"
-                   sizes="(max-width: 860px) 100vw, 58vw"
-                   width="1440" height="900" loading="lazy" decoding="async" alt="">
+                   sizes="(max-width: 860px) 100vw, 680px"
+                   width="1440" height="900" loading="lazy" decoding="async"
+                   alt="Page d'accueil d'EM Concept : titre « Tout se voit. Rien ne dépasse. » sur une chambre plongée dans la pénombre">
+              <span class="project-shot-label">Aperçu en direct</span>
             </a>
             <div class="project-body">
-              <p class="project-meta"><span class="project-num">01</span>Électricité &amp; audiovisuel · Var</p>
-              <h3>EM Concept</h3>
-              <p>Intégrateur son, vidéo et réseau, électricien à Roquebrune-sur-Argens. Une page d'accueil sombre et cinématographique : la lumière s'allume dans la pièce, galerie de chantiers filtrable, formulaire de devis.</p>
-              <ul class="tags"><li>Animations sur mesure</li><li>Galerie filtrable</li><li>Formulaire de contact</li><li>WhatsApp</li></ul>
-              <a class="project-link" href="https://emconcept.vercel.app" target="_blank" rel="noopener">Voir le site<span class="visually-hidden"> EM Concept (nouvel onglet)</span> <span aria-hidden="true">↗</span></a>
+              <p class="project-meta reveal" style="--i:1"><span class="project-num">01</span>Électricité &amp; audiovisuel · Var</p>
+              <h3 class="reveal" style="--i:2">EM Concept</h3>
+              <p class="project-desc reveal" style="--i:3">Intégrateur son, vidéo et réseau, électricien à Roquebrune-sur-Argens. Une page d'accueil sombre et cinématographique : la lumière s'allume dans la pièce, galerie de chantiers filtrable, formulaire de devis.</p>
+              <ul class="tags reveal" style="--i:4"><li>Animations sur mesure</li><li>Galerie filtrable</li><li>Formulaire de contact</li><li>WhatsApp</li></ul>
+              <div class="project-actions reveal" style="--i:5">
+                <a class="link-arrow" href="https://emconcept.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> EM Concept (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+              </div>
             </div>
           </li>
 
-          <li class="project reveal">
-            <a class="project-shot" href="https://autoecole-smoky.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <li class="project" data-reveal>
+            <a class="project-shot" href="https://autoecole-smoky.vercel.app" target="_blank" rel="noopener" data-preview
+               data-title="Auto-école La Tour de Mare" data-meta="Auto-école · Fréjus">
               <img src="assets/img/autoecole-720.jpg"
                    srcset="assets/img/autoecole-720.jpg 720w, assets/img/autoecole-1440.jpg 1440w"
-                   sizes="(max-width: 860px) 100vw, 58vw"
-                   width="1440" height="900" loading="lazy" decoding="async" alt="">
+                   sizes="(max-width: 860px) 100vw, 680px"
+                   width="1440" height="900" loading="lazy" decoding="async"
+                   alt="Page d'accueil de l'auto-école La Tour de Mare : « Passez votre permis dans une auto-école qui a fait ses preuves »">
+              <span class="project-shot-label">Aperçu en direct</span>
             </a>
             <div class="project-body">
-              <p class="project-meta"><span class="project-num">02</span>Auto-école · Fréjus</p>
-              <h3>Auto-école La Tour de Mare</h3>
-              <p>Près de 30 ans d'expérience à présenter clairement : formations voiture, moto, conduite accompagnée, cyclo, voiturette et remorque, avec une page de tarifs dédiée.</p>
-              <ul class="tags"><li>Plusieurs pages</li><li>Grille de tarifs</li><li>Pictogrammes véhicules</li></ul>
-              <a class="project-link" href="https://autoecole-smoky.vercel.app" target="_blank" rel="noopener">Voir le site<span class="visually-hidden"> Auto-école La Tour de Mare (nouvel onglet)</span> <span aria-hidden="true">↗</span></a>
+              <p class="project-meta reveal" style="--i:1"><span class="project-num">02</span>Auto-école · Fréjus</p>
+              <h3 class="reveal" style="--i:2">Auto-école La Tour de Mare</h3>
+              <p class="project-desc reveal" style="--i:3">Près de 30 ans d'expérience à présenter clairement : formations voiture, moto, conduite accompagnée, cyclo, voiturette et remorque, avec une page de tarifs dédiée.</p>
+              <ul class="tags reveal" style="--i:4"><li>Plusieurs pages</li><li>Grille de tarifs</li><li>Pictogrammes véhicules</li></ul>
+              <div class="project-actions reveal" style="--i:5">
+                <a class="link-arrow" href="https://autoecole-smoky.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> Auto-école La Tour de Mare (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+              </div>
             </div>
           </li>
 
-          <li class="project reveal">
-            <a class="project-shot" href="https://osteoflo.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <li class="project" data-reveal>
+            <a class="project-shot" href="https://osteoflo.vercel.app" target="_blank" rel="noopener" data-preview
+               data-title="Florian Bozzetti, ostéopathe" data-meta="Santé · Puget-sur-Argens">
               <img src="assets/img/osteoflo-720.jpg"
                    srcset="assets/img/osteoflo-720.jpg 720w, assets/img/osteoflo-1440.jpg 1440w"
-                   sizes="(max-width: 860px) 100vw, 58vw"
-                   width="1440" height="900" loading="lazy" decoding="async" alt="">
+                   sizes="(max-width: 860px) 100vw, 680px"
+                   width="1440" height="900" loading="lazy" decoding="async"
+                   alt="Page d'accueil du cabinet de Florian Bozzetti : « Retrouver un corps libre de ses mouvements » et encart des horaires">
+              <span class="project-shot-label">Aperçu en direct</span>
             </a>
             <div class="project-body">
-              <p class="project-meta"><span class="project-num">03</span>Santé · Puget-sur-Argens</p>
-              <h3>Florian Bozzetti, ostéopathe</h3>
-              <p>Un cabinet d'ostéopathie au ton calme et rassurant : motifs de consultation, déroulé d'une séance, tarifs, et un encart qui indique en direct si le cabinet est ouvert.</p>
-              <ul class="tags"><li>Horaires en direct</li><li>Prise de rendez-vous</li><li>Mentions légales</li></ul>
-              <a class="project-link" href="https://osteoflo.vercel.app" target="_blank" rel="noopener">Voir le site<span class="visually-hidden"> Florian Bozzetti (nouvel onglet)</span> <span aria-hidden="true">↗</span></a>
+              <p class="project-meta reveal" style="--i:1"><span class="project-num">03</span>Santé · Puget-sur-Argens</p>
+              <h3 class="reveal" style="--i:2">Florian Bozzetti, ostéopathe</h3>
+              <p class="project-desc reveal" style="--i:3">Un cabinet d'ostéopathie au ton calme et rassurant : motifs de consultation, déroulé d'une séance, tarifs, et un encart qui indique en direct si le cabinet est ouvert.</p>
+              <ul class="tags reveal" style="--i:4"><li>Horaires en direct</li><li>Prise de rendez-vous</li><li>Mentions légales</li></ul>
+              <div class="project-actions reveal" style="--i:5">
+                <a class="link-arrow" href="https://osteoflo.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> Florian Bozzetti (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+              </div>
             </div>
           </li>
 
-          <li class="project reveal">
-            <a class="project-shot" href="https://annick-taquet-assoignons.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <li class="project" data-reveal>
+            <a class="project-shot" href="https://annick-taquet-assoignons.vercel.app" target="_blank" rel="noopener" data-preview
+               data-title="Annick Taquet-Assoignons" data-meta="Psychologue &amp; autrice">
               <img src="assets/img/taquet-720.jpg"
                    srcset="assets/img/taquet-720.jpg 720w, assets/img/taquet-1440.jpg 1440w"
-                   sizes="(max-width: 860px) 100vw, 58vw"
-                   width="1440" height="900" loading="lazy" decoding="async" alt="">
+                   sizes="(max-width: 860px) 100vw, 680px"
+                   width="1440" height="900" loading="lazy" decoding="async"
+                   alt="Page d'accueil d'Annick Taquet-Assoignons : « Mettre des mots sur ce qui se vit » entouré de couvertures de livres">
+              <span class="project-shot-label">Aperçu en direct</span>
             </a>
             <div class="project-body">
-              <p class="project-meta"><span class="project-num">04</span>Psychologue &amp; autrice</p>
-              <h3>Annick Taquet-Assoignons</h3>
-              <p>Psychologue clinicienne et autrice : ses albums pour enfants et ses livres pour les soignants et les proches aidants, son approche, son parcours et ses prochaines dédicaces.</p>
-              <ul class="tags"><li>Catalogue de livres</li><li>Agenda des dédicaces</li><li>Instagram</li></ul>
-              <a class="project-link" href="https://annick-taquet-assoignons.vercel.app" target="_blank" rel="noopener">Voir le site<span class="visually-hidden"> Annick Taquet-Assoignons (nouvel onglet)</span> <span aria-hidden="true">↗</span></a>
+              <p class="project-meta reveal" style="--i:1"><span class="project-num">04</span>Psychologue &amp; autrice</p>
+              <h3 class="reveal" style="--i:2">Annick Taquet-Assoignons</h3>
+              <p class="project-desc reveal" style="--i:3">Psychologue clinicienne et autrice : ses albums pour enfants et ses livres pour les soignants et les proches aidants, son approche, son parcours et ses prochaines dédicaces.</p>
+              <ul class="tags reveal" style="--i:4"><li>Catalogue de livres</li><li>Agenda des dédicaces</li><li>Instagram</li></ul>
+              <div class="project-actions reveal" style="--i:5">
+                <a class="link-arrow" href="https://annick-taquet-assoignons.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> Annick Taquet-Assoignons (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+              </div>
             </div>
           </li>
         </ol>
@@ -121,22 +195,22 @@
 
     <!-- DEMARCHE -->
     <section class="section section-alt" id="demarche" aria-labelledby="demarche-title">
-      <div class="container">
+      <div class="container" data-reveal>
         <h2 id="demarche-title" class="section-title reveal">Démarche</h2>
         <ul class="principles">
-          <li class="reveal">
+          <li class="reveal" style="--i:1">
             <h3>Une identité par métier</h3>
             <p>Pas de modèle tout prêt : couleurs, typographies et ton sont choisis pour la personne et son activité.</p>
           </li>
-          <li class="reveal">
+          <li class="reveal" style="--i:2">
             <h3>Léger et rapide</h3>
             <p>HTML, CSS et JavaScript écrits à la main, sans dépendance : les pages s'affichent vite, même en 4G.</p>
           </li>
-          <li class="reveal">
+          <li class="reveal" style="--i:3">
             <h3>Pensé pour le téléphone</h3>
             <p>Appeler, écrire ou trouver l'adresse en un geste : c'est là que la plupart des visiteurs arrivent.</p>
           </li>
-          <li class="reveal">
+          <li class="reveal" style="--i:4">
             <h3>Visible localement</h3>
             <p>Titres, descriptions et données structurées soignés pour ressortir dans les recherches de la région.</p>
           </li>
@@ -146,10 +220,54 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span data-year>2026</span> Julien Bourgois</p>
-      <a href="#top">Haut de page ↑</a>
+    <div class="container">
+      <div class="footer-cta" data-reveal>
+        <p class="reveal">Le prochain site sera peut-être <em>le vôtre</em>.</p>
+      </div>
+      <div class="footer-inner">
+        <p>© <span data-year>2026</span> Julien Bourgois</p>
+        <a href="#top">Haut de page ↑</a>
+      </div>
     </div>
   </footer>
+
+  <!-- Live preview: filled and opened by assets/js/preview.js -->
+  <dialog class="preview" data-preview-dialog data-device="desktop" aria-labelledby="preview-title">
+    <div class="preview-bar">
+      <div class="preview-title">
+        <strong id="preview-title" data-preview-title></strong>
+        <span data-preview-meta></span>
+      </div>
+      <div class="segmented preview-device" role="group" aria-label="Taille d'écran">
+        <button type="button" aria-pressed="true" data-device-btn="desktop">Ordinateur</button>
+        <button type="button" aria-pressed="false" data-device-btn="mobile">Mobile</button>
+      </div>
+      <div class="preview-nav">
+        <button class="icon-btn" type="button" data-preview-prev aria-label="Site précédent"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+        <button class="icon-btn" type="button" data-preview-next aria-label="Site suivant"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+      </div>
+      <a class="btn" href="#" target="_blank" rel="noopener" data-preview-open><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg><span class="preview-open-label">Nouvel onglet</span><span class="visually-hidden"> (ouvre le site dans un nouvel onglet)</span></a>
+      <button class="icon-btn" type="button" data-preview-close aria-label="Fermer l'aperçu"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="preview-stage">
+      <div class="preview-frame">
+        <iframe title="Aperçu du site" data-preview-iframe loading="lazy" referrerpolicy="no-referrer"></iframe>
+        <p class="preview-loading" aria-live="polite" data-preview-loading>Chargement du site…</p>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="cursor" aria-hidden="true" data-cursor>Aperçu</div>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+  </svg>
 </body>
 </html>

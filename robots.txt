@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://julienb.vercel.app/sitemap.xml

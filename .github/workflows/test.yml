@@ -1,0 +1,16 @@
+# Runs the site checks on every push and pull request (Windows runner: PowerShell + Chrome preinstalled).
+name: Tests du site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifications statiques et exécution dans Chrome
+        shell: powershell
+        run: powershell -NoProfile -ExecutionPolicy Bypass -File tools/test.ps1

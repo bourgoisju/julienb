@@ -1,0 +1,13 @@
+{
+  "name": "Julien Bourgois — Sites web réalisés",
+  "short_name": "Julien B.",
+  "lang": "fr",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#f5f2ec",
+  "theme_color": "#f5f2ec",
+  "icons": [
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
