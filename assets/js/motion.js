@@ -46,6 +46,14 @@ export function initReveal() {
     el.querySelectorAll('.reveal').forEach((child) => child.classList.add('is-visible'));
   };
 
+  // The hero is always on screen at load: play its entrance right away rather than waiting on an observer.
+  const hero = document.querySelector('.hero[data-reveal]');
+  if (hero && scrollY < innerHeight) {
+    void hero.offsetHeight; // commit the hidden state first so the transition runs
+    show(hero);
+    targets.splice(targets.indexOf(hero), 1);
+  }
+
   if (!('IntersectionObserver' in window)) { targets.forEach(show); return; }
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
