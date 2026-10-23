@@ -45,7 +45,7 @@ pour vérifier que le JavaScript démarre sans erreur, sur ordinateur et sur té
    `chrome --headless=new --hide-scrollbars --window-size=1440,900 --screenshot=nom.png https://...`
 2. L'exporter en JPEG en 720 px et 1440 px de large (`nom-720.jpg`, `nom-1440.jpg`) dans `assets/img/`.
 3. Dans `index.html`, copier un bloc `<li class="project" data-reveal>` puis changer numéro, textes, images,
-   `href`, `data-title` et `data-meta`. Les compteurs se mettent à jour tout seuls.
+   `href`, `data-title` et `data-meta`.
 4. Ajouter le site dans les écrans du hero (capture mobile `nom-mobile.jpg` en 390 px de large) et dans le JSON-LD (haut de `index.html`) et son adresse dans `frame-src` de `vercel.json`
    (sinon l'aperçu en direct est bloqué en production).
 5. Lancer `tools/test.ps1` : il signale tout oubli des étapes 3 et 4.
@@ -65,9 +65,9 @@ Les questions de la section « Questions » existent deux fois : dans la page (`
 ## Cache des navigateurs (important)
 
 Les images sont gardées 30 jours par les navigateurs. Pour que les visiteurs voient tout de suite une mise à jour,
-les fichiers sont appelés avec un numéro de version : `styles.css?v=20261024h`, `main.js?v=…`, les imports de
+les fichiers sont appelés avec un numéro de version : `styles.css?v=20261024i`, `main.js?v=…`, les imports de
 `main.js` et les captures (`emconcept-720.jpg?v=…`).
 
 **À chaque mise en ligne qui modifie le CSS, le JS ou une image**, remplacer ce numéro partout par la date du jour
-(rechercher/remplacer `?v=20261024h` dans `index.html`, `404.html` et `assets/js/main.js`).
+(rechercher/remplacer `?v=20261024i` dans `index.html`, `404.html` et `assets/js/main.js`).
 `tools/test.ps1` vérifie que le même numéro est utilisé partout.

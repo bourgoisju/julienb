@@ -118,7 +118,7 @@ if (-not $SkipBrowser) {
         $profile = Join-Path $env:TEMP "site-test-$Port"
         $dom = & $chrome --headless=new --disable-gpu --no-first-run --user-data-dir="$profile" --window-size=1280,900 --run-all-compositor-stages-before-draw --virtual-time-budget=10000 --dump-dom "http://localhost:$Port/" 2>$null | Out-String
         Check 'JavaScript modules boot without error (html.is-ready)' ($dom -match '<html[^>]*class="[^"]*is-ready')
-        Check 'project counter filled by JS' ($dom -match "data-site-count-label=`"`">$projects projets<")
+        Check 'footer year filled by JS' ($dom -match 'data-year="">20[0-9][0-9]<')
         Check 'theme toggle labelled by JS' ($dom -match 'data-theme-toggle="" aria-label="Passer en th[^"]{1,3}me (sombre|clair)"')
         Check 'hero revealed' ($dom -match 'class="hero container[^"]*\bis-visible\b')
         $mobile = & $chrome --headless=new --disable-gpu --no-first-run --user-data-dir="$profile" --window-size=375,812 --virtual-time-budget=10000 --run-all-compositor-stages-before-draw --dump-dom "http://localhost:$Port/" 2>$null | Out-String
