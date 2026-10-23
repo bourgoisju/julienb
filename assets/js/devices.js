@@ -19,6 +19,12 @@ export function initDevices({ motion }) {
     active = i % n;
     desktop.forEach((img, k) => img.classList.toggle('is-active', k === active));
     mobile.forEach((img, k) => img.classList.toggle('is-active', k === active));
+    // Status bar takes the colours of the site's top edge, as on a real phone.
+    const phone = mobile[active]?.parentElement;
+    if (phone && mobile[active].dataset.status) {
+      phone.style.setProperty('--status-bg', mobile[active].dataset.status);
+      phone.style.setProperty('--status-ink', mobile[active].dataset.statusInk);
+    }
     const p = projects[active];
     if (p && name) {
       name.textContent = p.dataset.title;

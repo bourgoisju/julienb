@@ -1,10 +1,10 @@
 // Entry point. Each module enhances markup that already works without JavaScript.
-import { initTheme } from './theme.js?v=20261023';
-import { initHeader, initReveal, initParallax } from './motion.js?v=20261023';
-import { initPreview } from './preview.js?v=20261023';
-import { initCursor } from './cursor.js?v=20261023';
-import { initMagnetic, initCountUp } from './effects.js?v=20261023';
-import { initDevices } from './devices.js?v=20261023';
+import { initTheme } from './theme.js?v=20261023b';
+import { initHeader, initReveal, initParallax } from './motion.js?v=20261023b';
+import { initPreview } from './preview.js?v=20261023b';
+import { initCursor } from './cursor.js?v=20261023b';
+import { initMagnetic, initCountUp } from './effects.js?v=20261023b';
+import { initDevices } from './devices.js?v=20261023b';
 
 const root = document.documentElement;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
