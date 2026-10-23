@@ -209,6 +209,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero-pillars { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 22px; font: 500 var(--fs-md)/1.4 var(--sans); color: var(--ink-2); }
 .hero-pillars li + li::before { content: ""; display: inline-block; width: 5px; height: 5px; margin-right: 14px; border-radius: 50%; background: var(--blue-3); vertical-align: middle; }
 .lead { margin-top: 22px; max-width: 46ch; font-size: var(--fs-lg); line-height: 1.6; color: var(--muted); }
+.lead + .lead { margin-top: 12px; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 34px; }
 .hero-proof { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--line); font-size: var(--fs-sm); color: var(--muted); }
 .hero-proof strong { display: block; font: 600 1.6rem/1 var(--display); color: var(--ink); font-variant-numeric: tabular-nums; margin-bottom: 4px; }
