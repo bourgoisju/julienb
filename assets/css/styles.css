@@ -508,3 +508,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .header-cta { display: none; }
   .device-caption { font-size: .8rem; }
 }
+
+/* Signature on two clean lines on phones (no dangling dash) */
+.br-mobile { display: none; }
+@media (max-width: 560px) {
+  .kicker-sep { display: none; }
+  .br-mobile { display: inline; }
+}
