@@ -6,16 +6,17 @@ HTML / CSS / JavaScript sans dépendance ni étape de build : on modifie, on rec
 ## Structure
 
 ```
-index.html                Page unique : accroche, travaux, offres, méthode, questions, contact
+index.html                Page unique : accroche + appareils, réalisations, offres, méthode, questions, contact
 404.html                  Page « introuvable » servie par Vercel
 assets/css/styles.css     Styles : jetons (couleurs, typo, espacements, mouvements) en tête, puis composants
 assets/js/main.js         Point d'entrée (modules ES) — chaque module améliore un HTML qui marche déjà sans JS
 assets/js/theme.js        Bascule clair / sombre, mémorisée dans le navigateur
-assets/js/motion.js       En-tête, apparitions au défilement, parallaxe, bande de captures liée au défilement
+assets/js/motion.js       En-tête, apparitions au défilement, parallaxe des captures
+assets/js/devices.js      Écrans de l'ordinateur et du téléphone du hero (rotation des sites, inclinaison à la souris)
 assets/js/effects.js      Bouton aimanté, compteur animé
 assets/js/preview.js      Aperçu en direct des sites dans une fenêtre (ordinateur / mobile, flèches, Échap)
 assets/js/cursor.js       Bulle « Voir » qui suit la souris sur les captures
-assets/img/               Captures (720 et 1440 px), image de partage, icônes
+assets/img/               Captures ordinateur (720 et 1440 px) et mobile (nom-mobile.jpg, 390 px), partage, icônes
 vercel.json               En-têtes de sécurité (CSP) et cache
 robots.txt, sitemap.xml, site.webmanifest
 tools/serve.ps1           Serveur local de prévisualisation
@@ -40,12 +41,12 @@ pour vérifier que le JavaScript démarre sans erreur, sur ordinateur et sur té
 
 ## Ajouter un site
 
-1. Capture en 1440 × 900 avec Chrome :
+1. Capture en 1440 × 900 avec Chrome (et une capture mobile 390 px pour le hero) :
    `chrome --headless=new --hide-scrollbars --window-size=1440,900 --screenshot=nom.png https://...`
 2. L'exporter en JPEG en 720 px et 1440 px de large (`nom-720.jpg`, `nom-1440.jpg`) dans `assets/img/`.
 3. Dans `index.html`, copier un bloc `<li class="project" data-reveal>` puis changer numéro, textes, images,
    `href`, `data-title` et `data-meta`. Les compteurs se mettent à jour tout seuls.
-4. Ajouter le site dans la bande de captures (`.reel`) et dans le JSON-LD (haut de `index.html`) et son adresse dans `frame-src` de `vercel.json`
+4. Ajouter le site dans les écrans du hero (capture mobile `nom-mobile.jpg` en 390 px de large) et dans le JSON-LD (haut de `index.html`) et son adresse dans `frame-src` de `vercel.json`
    (sinon l'aperçu en direct est bloqué en production).
 5. Lancer `tools/test.ps1` : il signale tout oubli des étapes 3 et 4.
 

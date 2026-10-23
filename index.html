@@ -4,23 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Julien Bourgois — Création de sites web sur mesure</title>
-  <meta name="description" content="Julien Bourgois conçoit et développe des sites vitrines sur mesure pour artisans, commerces et indépendants : rapides, pensés pour le mobile. Devis gratuit.">
+  <meta name="description" content="Julien Bourgois crée des sites web modernes, performants et sur mesure pour artisans, commerces et indépendants. Pensés pour le mobile. Devis gratuit.">
   <link rel="canonical" href="https://julienb.vercel.app/">
-  <meta name="theme-color" content="#f4f2ee" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0f0f0e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#060a14" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#060a14" media="(prefers-color-scheme: dark)">
   <!-- Before first paint: saved theme + opt-in to motion (removed again if main.js never boots). -->
   <script>(()=>{const d=document.documentElement;try{const t=localStorage.getItem('theme');if(t==='light'||t==='dark')d.dataset.theme=t}catch(e){}if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('motion');setTimeout(()=>{if(!d.classList.contains('is-ready'))d.classList.remove('motion')},2500)}})()</script>
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="Julien Bourgois">
-  <meta property="og:title" content="Julien Bourgois — Des sites web pour ceux qui font.">
-  <meta property="og:description" content="Sites vitrines sur mesure pour artisans, commerces et indépendants. Rapides, pensés pour le mobile, sur devis.">
+  <meta property="og:site_name" content="Julien Bourgois — Création de sites web">
+  <meta property="og:title" content="Des sites web qui font la différence — Julien Bourgois">
+  <meta property="og:description" content="Sites web modernes, performants et sur mesure pour artisans, commerces et indépendants. Devis gratuit.">
   <meta property="og:url" content="https://julienb.vercel.app/">
   <meta property="og:image" content="https://julienb.vercel.app/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Julien Bourgois, studio web : des sites web pour ceux qui font.">
+  <meta property="og:image:alt" content="Julien Bourgois, création de sites web : des sites web qui font la différence.">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -29,7 +29,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="preload" as="image" href="assets/img/emconcept-720.jpg" imagesrcset="assets/img/emconcept-720.jpg 720w, assets/img/emconcept-1440.jpg 1440w" imagesizes="(max-width: 960px) 90vw, 600px">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script type="module" src="assets/js/main.js"></script>
 
@@ -65,8 +66,7 @@
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "item": { "@type": "WebSite", "name": "EM Concept", "url": "https://emconcept.vercel.app/", "creator": { "@id": "https://julienb.vercel.app/#julien" } } },
           { "@type": "ListItem", "position": 2, "item": { "@type": "WebSite", "name": "Auto-école La Tour de Mare", "url": "https://autoecole-smoky.vercel.app/", "creator": { "@id": "https://julienb.vercel.app/#julien" } } },
-          { "@type": "ListItem", "position": 3, "item": { "@type": "WebSite", "name": "Florian Bozzetti, ostéopathe", "url": "https://osteoflo.vercel.app/", "creator": { "@id": "https://julienb.vercel.app/#julien" } } },
-          { "@type": "ListItem", "position": 4, "item": { "@type": "WebSite", "name": "Annick Taquet-Assoignons", "url": "https://annick-taquet-assoignons.vercel.app/", "creator": { "@id": "https://julienb.vercel.app/#julien" } } }
+          { "@type": "ListItem", "position": 3, "item": { "@type": "WebSite", "name": "Annick Taquet-Assoignons", "url": "https://annick-taquet-assoignons.vercel.app/", "creator": { "@id": "https://julienb.vercel.app/#julien" } } }
         ]
       },
       {
@@ -89,18 +89,25 @@
 
   <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="#top">Julien Bourgois<span class="dot" aria-hidden="true">.</span></a>
+      <a class="brand" href="#top">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4ed8"/><stop offset=".55" stop-color="#2f6bff"/><stop offset="1" stop-color="#5aa2ff"/></linearGradient></defs>
+          <rect width="40" height="40" rx="11" fill="#0b1226"/>
+          <path d="M9 27 17 9h7l-8 18z" fill="url(#bm)"/><path d="M16 27l8-18h7l-8 18z" fill="url(#bm)" opacity=".55"/><path d="M9 27h14l-3 4H6z" fill="#5aa2ff" opacity=".9"/>
+        </svg>
+        <span class="brand-text"><strong>Julien Bourgois</strong><small>Création de sites web</small></span>
+      </a>
       <div class="header-end">
         <nav aria-label="Navigation principale">
           <ul class="nav" data-nav>
-            <li><a href="#travaux">Travaux</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
             <li><a href="#offres">Offres</a></li>
             <li><a href="#methode">Méthode</a></li>
             <li><a href="#faq">Questions</a></li>
           </ul>
         </nav>
-        <a class="btn btn-primary btn-sm" href="#contact" data-magnetic>Démarrer un projet</a>
-        <button class="icon-btn" type="button" data-theme-toggle aria-label="Passer en thème sombre">
+        <a class="btn btn-primary btn-sm header-cta" href="#contact" data-magnetic>Discutons de votre projet</a>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Passer en thème clair">
           <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"/></svg>
           <svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"/></svg>
         </button>
@@ -110,159 +117,153 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero container" id="top" data-reveal>
-      <div class="hero-meta label reveal" style="--i:0">
-        <span>Studio web indépendant</span>
-        <span>Conception &amp; développement</span>
-        <span><strong data-site-count data-count-up>4</strong> sites en ligne</span>
-      </div>
-      <h1>
-        <span class="line"><span style="--i:0">Des sites web</span></span>
-        <span class="line indent"><span style="--i:1">pour ceux</span></span>
-        <span class="line"><span style="--i:2">qui font<span class="dot">.</span></span></span>
-      </h1>
-      <div class="hero-bottom grid">
-        <p class="label reveal" style="--i:3">(Studio)</p>
-        <div class="hero-text">
-          <p class="lead reveal" style="--i:4">Artisans, commerçants, thérapeutes, auteurs : je conçois et développe des sites vitrines sur mesure, rapides et pensés pour le téléphone, qui donnent envie de vous appeler.</p>
+    <div class="hero-wrap">
+      <!-- HERO — text on the left; on the right the real sites on a laptop and a phone, over folded light planes.
+           assets/js/devices.js cycles the screens and tilts the scene toward the pointer. -->
+      <section class="hero container" id="top" data-reveal data-devices>
+        <div class="hero-copy">
+          <p class="kicker kicker-left reveal" style="--i:0">Création de sites web</p>
+          <h1>
+            <span class="line"><span style="--i:0">Des sites web</span></span>
+            <span class="line"><span style="--i:1">qui font</span></span>
+            <span class="line"><span style="--i:2" class="grad-text">la différence.</span></span>
+          </h1>
+          <ul class="hero-pillars reveal" style="--i:3"><li>Modernes</li><li>Performants</li><li>Sur mesure</li></ul>
+          <p class="lead reveal" style="--i:4">Je conçois et développe des sites vitrines pour les artisans, commerces et indépendants : une image à la hauteur de votre travail, et des visiteurs qui vous contactent en un geste depuis leur téléphone.</p>
           <div class="hero-actions reveal" style="--i:5">
-            <a class="btn btn-primary" href="#contact" data-magnetic>Démarrer un projet <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-            <a class="link-arrow" href="#travaux">Voir les travaux</a>
+            <a class="btn btn-primary" href="#contact" data-magnetic>Discutons de votre projet <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a class="link-arrow" href="#realisations">Voir les réalisations <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+          </div>
+          <ul class="hero-proof reveal" style="--i:6">
+            <li><strong data-site-count data-count-up>3</strong>sites en ligne</li>
+            <li><strong>100 %</strong>sur mesure</li>
+            <li><strong>Devis</strong>gratuit</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg class="folds" viewBox="0 0 600 520" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="fg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b2a8a"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient>
+              <linearGradient id="fg2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5aa2ff"/><stop offset=".6" stop-color="#2f6bff"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient>
+              <linearGradient id="fg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6bff"/><stop offset="1" stop-color="#0e2f9e"/></linearGradient>
+              <linearGradient id="fseam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+            </defs>
+            <g opacity=".92">
+              <polygon class="f f1" points="40,150 230,60 300,450 120,520" fill="url(#fg1)"/>
+              <polygon class="f f2" points="230,60 470,20 520,380 300,450" fill="url(#fg2)"/>
+              <polygon points="230,60 262,55 330,442 300,450" fill="url(#fseam)"/>
+              <polygon class="f f3" points="470,20 600,90 600,320 520,380" fill="url(#fg3)" opacity=".75"/>
+            </g>
+          </svg>
+          <div class="devices">
+            <div class="laptop">
+              <div class="laptop-screen">
+                <div class="screen" data-screen="desktop">
+                  <img class="is-active" src="assets/img/emconcept-720.jpg" srcset="assets/img/emconcept-720.jpg 720w, assets/img/emconcept-1440.jpg 1440w" sizes="(max-width: 960px) 90vw, 600px" width="1440" height="900" fetchpriority="high" decoding="async" alt="">
+                  <img src="assets/img/autoecole-720.jpg" srcset="assets/img/autoecole-720.jpg 720w, assets/img/autoecole-1440.jpg 1440w" sizes="(max-width: 960px) 90vw, 600px" width="1440" height="900" decoding="async" alt="">
+                  <img src="assets/img/taquet-720.jpg" srcset="assets/img/taquet-720.jpg 720w, assets/img/taquet-1440.jpg 1440w" sizes="(max-width: 960px) 90vw, 600px" width="1440" height="900" decoding="async" alt="">
+                </div>
+              </div>
+              <div class="laptop-base"></div>
+            </div>
+            <div class="phone">
+              <div class="screen" data-screen="mobile">
+                <img class="is-active" src="assets/img/emconcept-mobile.jpg" width="390" height="844" decoding="async" alt="">
+                <img src="assets/img/autoecole-mobile.jpg" width="390" height="844" decoding="async" alt="">
+                <img src="assets/img/taquet-mobile.jpg" width="390" height="844" decoding="async" alt="">
+              </div>
+            </div>
+            <p class="device-caption"><b data-device-name>EM Concept</b><span data-device-meta>Électricité &amp; audiovisuel</span></p>
           </div>
         </div>
-        <a class="hero-scroll label reveal" style="--i:6" href="#travaux"><span>Défiler</span><span aria-hidden="true"></span></a>
-      </div>
-    </section>
-
-    <!-- Reel: decorative band of the four sites, slides sideways with the scroll (motion.js) -->
-    <div class="reel" aria-hidden="true" data-reel>
-      <div class="reel-track">
-        <figure><img src="assets/img/emconcept-720.jpg" srcset="assets/img/emconcept-720.jpg 720w, assets/img/emconcept-1440.jpg 1440w" sizes="(max-width: 700px) 260px, 38vw" width="1440" height="900" decoding="async" alt=""><figcaption class="label"><span>EM Concept</span><span>Électricité</span></figcaption></figure>
-        <figure><img src="assets/img/autoecole-720.jpg" srcset="assets/img/autoecole-720.jpg 720w, assets/img/autoecole-1440.jpg 1440w" sizes="(max-width: 700px) 260px, 38vw" width="1440" height="900" decoding="async" alt=""><figcaption class="label"><span>La Tour de Mare</span><span>Auto-école</span></figcaption></figure>
-        <figure><img src="assets/img/osteoflo-720.jpg" srcset="assets/img/osteoflo-720.jpg 720w, assets/img/osteoflo-1440.jpg 1440w" sizes="(max-width: 700px) 260px, 38vw" width="1440" height="900" loading="lazy" decoding="async" alt=""><figcaption class="label"><span>Florian Bozzetti</span><span>Ostéopathie</span></figcaption></figure>
-        <figure><img src="assets/img/taquet-720.jpg" srcset="assets/img/taquet-720.jpg 720w, assets/img/taquet-1440.jpg 1440w" sizes="(max-width: 700px) 260px, 38vw" width="1440" height="900" loading="lazy" decoding="async" alt=""><figcaption class="label"><span>A. Taquet-Assoignons</span><span>Édition</span></figcaption></figure>
-      </div>
+      </section>
     </div>
 
-    <!-- TRAVAUX
+    <!-- RÉALISATIONS
          Pour ajouter un site : capture 1440×900 en JPEG (nom-720.jpg et nom-1440.jpg dans assets/img/),
          puis copier un bloc <li class="project">, changer le numéro, les textes, les images et data-preview / href.
-         Penser aussi au JSON-LD en haut de page et à frame-src dans vercel.json. -->
-    <section class="section" id="travaux" aria-labelledby="travaux-title">
+         Penser aussi au JSON-LD en haut de page, à frame-src dans vercel.json et, si besoin, aux écrans du hero. -->
+    <section class="section" id="realisations" aria-labelledby="realisations-title">
       <div class="container">
-        <header class="section-head grid">
-          <p class="label reveal">(01) Travaux — <span data-site-count-label>4 projets</span></p>
-          <h2 id="travaux-title" class="reveal" style="--i:1">Quatre métiers, <span>quatre identités.</span></h2>
+        <header class="section-head">
+          <p class="kicker reveal">Réalisations · <span data-site-count-label>3 projets</span></p>
+          <h2 id="realisations-title" class="reveal" style="--i:1">Chaque métier mérite <span class="grad-text">sa propre identité.</span></h2>
+          <p class="reveal" style="--i:2">Des sites en ligne, à parcourir en direct : cliquez sur une capture pour ouvrir le site dans un aperçu.</p>
         </header>
 
         <ol class="works">
-          <li class="project" data-reveal>
+          <li class="project card" data-reveal>
             <a class="project-shot" href="https://emconcept.vercel.app" target="_blank" rel="noopener" data-preview
                data-title="EM Concept" data-meta="Électricité &amp; audiovisuel · Var">
               <img src="assets/img/emconcept-720.jpg"
                    srcset="assets/img/emconcept-720.jpg 720w, assets/img/emconcept-1440.jpg 1440w"
-                   sizes="(max-width: 900px) 100vw, 50vw"
+                   sizes="(max-width: 960px) 100vw, 680px"
                    width="1440" height="900" loading="lazy" decoding="async"
-                   alt="Page d'accueil d'EM Concept : titre « Tout se voit. Rien ne dépasse. » sur une chambre plongée dans la pénombre">
+                   alt="Page d'accueil d'EM Concept : « L'électricité pour base, la technologie pour signature » sur un salon éclairé">
               <span class="project-shot-label">Aperçu en direct</span>
             </a>
-            <div class="project-head">
-              <span class="project-num">01</span>
+            <div class="project-body">
+              <p class="project-meta"><span class="project-num">01</span>Électricité &amp; audiovisuel · Var</p>
               <h3>EM Concept</h3>
-              <span class="project-meta">Électricité &amp; audiovisuel · Var</span>
+              <p class="project-desc">Électricien et intégrateur audio, vidéo et réseau. Une page d'accueil sombre et cinématographique, une galerie de chantiers filtrable et un contact en un geste par téléphone ou WhatsApp.</p>
+              <ul class="tags"><li>Animations sur mesure</li><li>Galerie filtrable</li><li>WhatsApp</li></ul>
+              <p class="project-actions"><a class="link-arrow" href="https://emconcept.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> EM Concept (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></p>
             </div>
-            <p class="project-desc">Intégrateur son, vidéo et réseau. Une page d'accueil sombre et cinématographique où la lumière s'allume dans la pièce, une galerie de chantiers filtrable et une demande de devis en un geste.</p>
-            <ul class="tags"><li>Animations sur mesure</li><li>Galerie filtrable</li><li>Formulaire</li></ul>
-            <p class="project-actions"><a class="link-arrow" href="https://emconcept.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> EM Concept (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></p>
           </li>
 
-          <li class="project" data-reveal>
+          <li class="project card" data-reveal>
             <a class="project-shot" href="https://autoecole-smoky.vercel.app" target="_blank" rel="noopener" data-preview
                data-title="Auto-école La Tour de Mare" data-meta="Auto-école · Fréjus">
               <img src="assets/img/autoecole-720.jpg"
                    srcset="assets/img/autoecole-720.jpg 720w, assets/img/autoecole-1440.jpg 1440w"
-                   sizes="(max-width: 900px) 100vw, 50vw"
+                   sizes="(max-width: 960px) 100vw, 680px"
                    width="1440" height="900" loading="lazy" decoding="async"
                    alt="Page d'accueil de l'auto-école La Tour de Mare : « Passez votre permis dans une auto-école qui a fait ses preuves »">
               <span class="project-shot-label">Aperçu en direct</span>
             </a>
-            <div class="project-head">
-              <span class="project-num">02</span>
+            <div class="project-body">
+              <p class="project-meta"><span class="project-num">02</span>Auto-école · Fréjus</p>
               <h3>Auto-école La Tour de Mare</h3>
-              <span class="project-meta">Auto-école · Fréjus</span>
+              <p class="project-desc">Près de 30 ans d'expérience à présenter clairement : voiture, moto, conduite accompagnée, cyclo, voiturette et remorque, avec une page de tarifs dédiée.</p>
+              <ul class="tags"><li>Plusieurs pages</li><li>Grille de tarifs</li><li>Pictogrammes</li></ul>
+              <p class="project-actions"><a class="link-arrow" href="https://autoecole-smoky.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> Auto-école La Tour de Mare (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></p>
             </div>
-            <p class="project-desc">Près de 30 ans d'expérience à présenter clairement : voiture, moto, conduite accompagnée, cyclo, voiturette et remorque, avec une page de tarifs dédiée.</p>
-            <ul class="tags"><li>Plusieurs pages</li><li>Grille de tarifs</li><li>Pictogrammes</li></ul>
-            <p class="project-actions"><a class="link-arrow" href="https://autoecole-smoky.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> Auto-école La Tour de Mare (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></p>
           </li>
 
-          <li class="project" data-reveal>
-            <a class="project-shot" href="https://osteoflo.vercel.app" target="_blank" rel="noopener" data-preview
-               data-title="Florian Bozzetti, ostéopathe" data-meta="Santé · Puget-sur-Argens">
-              <img src="assets/img/osteoflo-720.jpg"
-                   srcset="assets/img/osteoflo-720.jpg 720w, assets/img/osteoflo-1440.jpg 1440w"
-                   sizes="(max-width: 900px) 100vw, 50vw"
-                   width="1440" height="900" loading="lazy" decoding="async"
-                   alt="Page d'accueil du cabinet de Florian Bozzetti : « Retrouver un corps libre de ses mouvements » et encart des horaires">
-              <span class="project-shot-label">Aperçu en direct</span>
-            </a>
-            <div class="project-head">
-              <span class="project-num">03</span>
-              <h3>Florian Bozzetti</h3>
-              <span class="project-meta">Ostéopathe · Puget-sur-Argens</span>
-            </div>
-            <p class="project-desc">Un cabinet au ton calme et rassurant : motifs de consultation, déroulé d'une séance, tarifs, et un encart qui indique en direct si le cabinet est ouvert.</p>
-            <ul class="tags"><li>Horaires en direct</li><li>Prise de rendez-vous</li><li>Mentions légales</li></ul>
-            <p class="project-actions"><a class="link-arrow" href="https://osteoflo.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> Florian Bozzetti (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></p>
-          </li>
-
-          <li class="project" data-reveal>
+          <li class="project card" data-reveal>
             <a class="project-shot" href="https://annick-taquet-assoignons.vercel.app" target="_blank" rel="noopener" data-preview
                data-title="Annick Taquet-Assoignons" data-meta="Psychologue &amp; autrice">
               <img src="assets/img/taquet-720.jpg"
                    srcset="assets/img/taquet-720.jpg 720w, assets/img/taquet-1440.jpg 1440w"
-                   sizes="(max-width: 900px) 100vw, 50vw"
+                   sizes="(max-width: 960px) 100vw, 680px"
                    width="1440" height="900" loading="lazy" decoding="async"
                    alt="Page d'accueil d'Annick Taquet-Assoignons : « Mettre des mots sur ce qui se vit » entouré de couvertures de livres">
               <span class="project-shot-label">Aperçu en direct</span>
             </a>
-            <div class="project-head">
-              <span class="project-num">04</span>
+            <div class="project-body">
+              <p class="project-meta"><span class="project-num">03</span>Psychologue &amp; autrice</p>
               <h3>Annick Taquet-Assoignons</h3>
-              <span class="project-meta">Psychologue &amp; autrice</span>
+              <p class="project-desc">Ses albums pour enfants et ses livres pour les soignants et les proches aidants, son approche, son parcours et ses prochaines dédicaces.</p>
+              <ul class="tags"><li>Catalogue de livres</li><li>Agenda des dédicaces</li><li>Instagram</li></ul>
+              <p class="project-actions"><a class="link-arrow" href="https://annick-taquet-assoignons.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> Annick Taquet-Assoignons (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></p>
             </div>
-            <p class="project-desc">Ses albums pour enfants et ses livres pour les soignants et les proches aidants, son approche, son parcours et ses prochaines dédicaces.</p>
-            <ul class="tags"><li>Catalogue de livres</li><li>Agenda des dédicaces</li><li>Instagram</li></ul>
-            <p class="project-actions"><a class="link-arrow" href="https://annick-taquet-assoignons.vercel.app" target="_blank" rel="noopener">Ouvrir le site<span class="visually-hidden"> Annick Taquet-Assoignons (nouvel onglet)</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></p>
           </li>
         </ol>
       </div>
     </section>
 
     <!-- OFFRES -->
-    <section class="section" id="offres" aria-labelledby="offres-title">
+    <section class="section section-alt" id="offres" aria-labelledby="offres-title">
       <div class="container" data-reveal>
-        <header class="section-head grid">
-          <p class="label reveal">(02) Offres</p>
-          <h2 id="offres-title" class="reveal" style="--i:1">Trois façons <span>de travailler ensemble.</span></h2>
+        <header class="section-head">
+          <p class="kicker reveal">Offres</p>
+          <h2 id="offres-title" class="reveal" style="--i:1">Trois façons de <span class="grad-text">travailler ensemble.</span></h2>
+          <p class="reveal" style="--i:2">Chaque projet est différent : chaque offre est sur devis, gratuit et sans engagement.</p>
         </header>
         <ul class="offers">
-          <li class="offer offer-featured reveal" style="--i:2">
-            <p class="label">Le plus demandé</p>
-            <h3>Site vitrine</h3>
-            <p>Pour lancer votre activité en ligne, ou remplacer une page qui ne vous représente plus.</p>
-            <ul>
-              <li>Design sur mesure, à votre image</li>
-              <li>Adapté au téléphone et à l'ordinateur</li>
-              <li>Bases du référencement Google</li>
-              <li>Appel, e-mail et itinéraire en un geste</li>
-              <li>Mise en ligne</li>
-            </ul>
-            <div class="offer-foot"><span class="offer-price">Sur devis</span><a class="link-arrow" href="#contact">Demander un devis</a></div>
-          </li>
-          <li class="offer reveal" style="--i:3">
-            <p class="label">Vous avez déjà un site</p>
+          <li class="offer card reveal" style="--i:2">
+            <p class="offer-tag">Vous avez déjà un site</p>
             <h3>Refonte</h3>
             <p>Votre site existe, mais il ne vous ressemble plus ou ne vous amène pas de clients.</p>
             <ul>
@@ -273,8 +274,21 @@
             </ul>
             <div class="offer-foot"><span class="offer-price">Sur devis</span><a class="link-arrow" href="#contact">Demander un devis</a></div>
           </li>
-          <li class="offer reveal" style="--i:4">
-            <p class="label">Après la mise en ligne</p>
+          <li class="offer card offer-featured reveal" style="--i:3">
+            <p class="offer-tag">Le plus demandé</p>
+            <h3>Site vitrine</h3>
+            <p>Pour lancer votre activité en ligne, ou remplacer une page qui ne vous représente plus.</p>
+            <ul>
+              <li>Design sur mesure, à votre image</li>
+              <li>Adapté au téléphone et à l'ordinateur</li>
+              <li>Bases du référencement Google</li>
+              <li>Appel, e-mail et itinéraire en un geste</li>
+              <li>Mise en ligne</li>
+            </ul>
+            <div class="offer-foot"><span class="offer-price">Sur devis</span><a class="btn btn-primary btn-sm" href="#contact">Demander un devis</a></div>
+          </li>
+          <li class="offer card reveal" style="--i:4">
+            <p class="offer-tag">Après la mise en ligne</p>
             <h3>Suivi &amp; évolutions</h3>
             <p>Votre site continue d'évoluer avec votre activité, sans que vous ayez à y penser.</p>
             <ul>
@@ -289,90 +303,62 @@
       </div>
     </section>
 
-    <!-- METHODE -->
+    <!-- MÉTHODE -->
     <section class="section" id="methode" aria-labelledby="methode-title">
       <div class="container" data-reveal>
-        <header class="section-head grid">
-          <p class="label reveal">(03) Méthode</p>
-          <h2 id="methode-title" class="reveal" style="--i:1">Quatre étapes, <span>aucune surprise.</span></h2>
+        <header class="section-head">
+          <p class="kicker reveal">Méthode</p>
+          <h2 id="methode-title" class="reveal" style="--i:1">Quatre étapes, <span class="grad-text">aucune surprise.</span></h2>
         </header>
         <ol class="steps">
-          <li class="step reveal" style="--i:2">
-            <h3>Échange</h3>
-            <p>On parle de votre métier, de vos clients et de vos objectifs. Vous recevez un devis clair et détaillé.</p>
-          </li>
-          <li class="step reveal" style="--i:3">
-            <h3>Maquette</h3>
-            <p>Je dessine la direction visuelle du site. On l'ajuste ensemble avant d'écrire une seule ligne de code.</p>
-          </li>
-          <li class="step reveal" style="--i:4">
-            <h3>Développement</h3>
-            <p>Je construis le site : rapide, adapté au téléphone, préparé pour Google, testé sur tous les écrans.</p>
-          </li>
-          <li class="step reveal" style="--i:5">
-            <h3>Mise en ligne</h3>
-            <p>Le site est publié à votre adresse. Je reste disponible pour les ajustements et la suite.</p>
-          </li>
+          <li class="step reveal" style="--i:2"><h3>Échange</h3><p>On parle de votre métier, de vos clients et de vos objectifs. Vous recevez un devis clair et détaillé.</p></li>
+          <li class="step reveal" style="--i:3"><h3>Maquette</h3><p>Je dessine la direction visuelle du site. On l'ajuste ensemble avant d'écrire une seule ligne de code.</p></li>
+          <li class="step reveal" style="--i:4"><h3>Développement</h3><p>Je construis le site : rapide, adapté au téléphone, préparé pour Google, testé sur tous les écrans.</p></li>
+          <li class="step reveal" style="--i:5"><h3>Mise en ligne</h3><p>Le site est publié à votre adresse. Je reste disponible pour les ajustements et la suite.</p></li>
         </ol>
       </div>
     </section>
 
     <!-- FAQ (same questions as the FAQPage JSON-LD in <head>: keep both in sync) -->
-    <section class="section" id="faq" aria-labelledby="faq-title">
+    <section class="section section-alt" id="faq" aria-labelledby="faq-title">
       <div class="container" data-reveal>
-        <header class="section-head grid">
-          <p class="label reveal">(04) Questions</p>
-          <h2 id="faq-title" class="reveal" style="--i:1">Questions <span>fréquentes.</span></h2>
+        <header class="section-head">
+          <p class="kicker reveal">Questions</p>
+          <h2 id="faq-title" class="reveal" style="--i:1">Questions <span class="grad-text">fréquentes.</span></h2>
         </header>
-        <div class="faq-wrap grid">
-          <div class="faq-aside reveal" style="--i:2">
-            <p>Une autre question ? Le plus simple est d'en parler directement.</p>
-            <a class="link-arrow" href="tel:+33674887585">06 74 88 75 85</a>
-          </div>
-          <div class="faq reveal" style="--i:3">
-            <details>
-              <summary>Combien coûte un site ?</summary>
-              <div class="faq-answer"><p>Chaque site est sur devis : le prix dépend du nombre de pages, des contenus et des fonctionnalités. Le devis est gratuit, détaillé et sans engagement.</p></div>
-            </details>
-            <details>
-              <summary>Combien de temps faut-il pour créer mon site ?</summary>
-              <div class="faq-answer"><p>Cela dépend de l'ampleur du projet et de la disponibilité des contenus (textes, photos). Un calendrier précis est fixé avec le devis.</p></div>
-            </details>
-            <details>
-              <summary>Mon site sera-t-il adapté au téléphone ?</summary>
-              <div class="faq-answer"><p>Oui. Chaque page est conçue d'abord pour le téléphone, là où arrivent la plupart des visiteurs : appeler, écrire ou trouver l'adresse se fait en un geste.</p></div>
-            </details>
-            <details>
-              <summary>Et le référencement sur Google ?</summary>
-              <div class="faq-answer"><p>Chaque site est livré avec des bases soignées : titres et descriptions, pages rapides, données structurées et plan du site, pour que Google comprenne votre activité.</p></div>
-            </details>
-            <details>
-              <summary>Je n'ai pas encore de textes ni de photos. Est-ce un problème ?</summary>
-              <div class="faq-answer"><p>Non. On en parle dès le premier échange et on définit ensemble ce qu'il faut préparer, page par page.</p></div>
-            </details>
-            <details>
-              <summary>Pourrai-je faire modifier mon site plus tard ?</summary>
-              <div class="faq-answer"><p>Oui. C'est l'objet de l'offre Suivi &amp; évolutions : modifications de textes et de photos, nouvelles pages, améliorations au fil du temps.</p></div>
-            </details>
-          </div>
+        <div class="faq reveal" style="--i:2">
+          <details><summary>Combien coûte un site ?</summary><div class="faq-answer"><p>Chaque site est sur devis : le prix dépend du nombre de pages, des contenus et des fonctionnalités. Le devis est gratuit, détaillé et sans engagement.</p></div></details>
+          <details><summary>Combien de temps faut-il pour créer mon site ?</summary><div class="faq-answer"><p>Cela dépend de l'ampleur du projet et de la disponibilité des contenus (textes, photos). Un calendrier précis est fixé avec le devis.</p></div></details>
+          <details><summary>Mon site sera-t-il adapté au téléphone ?</summary><div class="faq-answer"><p>Oui. Chaque page est conçue d'abord pour le téléphone, là où arrivent la plupart des visiteurs : appeler, écrire ou trouver l'adresse se fait en un geste.</p></div></details>
+          <details><summary>Et le référencement sur Google ?</summary><div class="faq-answer"><p>Chaque site est livré avec des bases soignées : titres et descriptions, pages rapides, données structurées et plan du site, pour que Google comprenne votre activité.</p></div></details>
+          <details><summary>Je n'ai pas encore de textes ni de photos. Est-ce un problème ?</summary><div class="faq-answer"><p>Non. On en parle dès le premier échange et on définit ensemble ce qu'il faut préparer, page par page.</p></div></details>
+          <details><summary>Pourrai-je faire modifier mon site plus tard ?</summary><div class="faq-answer"><p>Oui. C'est l'objet de l'offre Suivi &amp; évolutions : modifications de textes et de photos, nouvelles pages, améliorations au fil du temps.</p></div></details>
         </div>
+        <p class="faq-more reveal" style="--i:3">Une autre question ? <a class="link-arrow" href="tel:+33674887585">Appelez-moi au 06 74 88 75 85</a></p>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container" data-reveal>
-        <p class="label reveal">(05) Contact</p>
-        <h2 id="contact-title" class="reveal" style="--i:1">Parlons de<br>votre projet<span class="dot">.</span></h2>
-        <div class="contact-grid grid">
-          <p class="label reveal" style="--i:2">Devis gratuit</p>
-          <p class="contact-lead reveal" style="--i:3">Un projet, une question, une envie de refaire votre site ? Appelez-moi ou écrivez-moi : je vous réponds rapidement.</p>
-          <ul class="contact-list reveal" style="--i:4">
+        <div class="contact-card reveal">
+          <div>
+            <p class="kicker kicker-left">Contact</p>
+            <h2 id="contact-title">Discutons de votre projet.</h2>
+            <p>Un projet, une question, une envie de refaire votre site ? Appelez-moi ou écrivez-moi : je vous réponds rapidement. Le devis est gratuit.</p>
+          </div>
+          <ul class="contact-list">
             <li>
-              <a class="contact-link" href="tel:+33674887585"><span><small>Téléphone</small> 06 74 88 75 85</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              <a class="contact-link" href="tel:+33674887585" data-magnetic>
+                <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#i-phone"/></svg></span>
+                <span><small>Téléphone</small> <b>06 74 88 75 85</b></span>
+              </a>
             </li>
             <li>
-              <a class="contact-link" href="mailto:bourgois.ju@gmail.com?subject=Projet%20de%20site%20web"><span><small>E-mail</small> bourgois.ju@gmail.com</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              <a class="contact-link" href="mailto:bourgois.ju@gmail.com?subject=Projet%20de%20site%20web" data-magnetic>
+                <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#i-mail"/></svg></span>
+                <span><small>E-mail</small> <b>bourgois.ju@gmail.com</b></span>
+              </a>
             </li>
           </ul>
         </div>
@@ -382,7 +368,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span data-year>2026</span> Julien Bourgois — Studio web indépendant</p>
+      <p>© <span data-year>2026</span> Julien Bourgois — Création de sites web</p>
       <a href="#top">Haut de page ↑</a>
     </div>
   </footer>
@@ -417,12 +403,15 @@
 
   <!-- Icon sprite -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
-    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M18 6 6 18M6 6l12 12"/></symbol>
-    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
-    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></g></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
   </svg>
 </body>
 </html>

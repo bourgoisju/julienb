@@ -91,27 +91,3 @@ export function initParallax() {
   addEventListener('scroll', request, { passive: true });
   addEventListener('resize', request, { passive: true });
 }
-
-// Reel: the band of screenshots slides sideways while it crosses the viewport.
-export function initReel() {
-  const reel = document.querySelector('[data-reel]');
-  const track = reel?.querySelector('.reel-track');
-  if (!track) return;
-  let visible = false;
-  let ticking = false;
-
-  const update = () => {
-    ticking = false;
-    const box = reel.getBoundingClientRect();
-    // 0 when the band enters at the bottom, 1 when it leaves at the top.
-    const t = Math.min(1, Math.max(0, (innerHeight - box.top) / (innerHeight + box.height)));
-    const max = Math.max(0, track.scrollWidth - reel.clientWidth);
-    track.style.setProperty('--reel', (t * max).toFixed(1));
-  };
-  const request = () => { if (visible && !ticking) { ticking = true; requestAnimationFrame(update); } };
-
-  new IntersectionObserver(([e]) => { visible = e.isIntersecting; request(); }).observe(reel);
-  addEventListener('scroll', request, { passive: true });
-  addEventListener('resize', request, { passive: true });
-  update();
-}

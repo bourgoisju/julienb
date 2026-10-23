@@ -62,7 +62,7 @@ Check "meta description 50-170 chars ($($desc.Length))" ($desc.Length -ge 50 -an
 foreach ($tag in 'rel="canonical"', 'og:title', 'og:description', 'og:image"', 'og:url', 'twitter:card') {
   Check "has $tag" ($index -match [regex]::Escape($tag))
 }
-$projects = [regex]::Matches($index, '<li class="project" data-reveal>').Count
+$projects = [regex]::Matches($index, '<li class="project[ "][^>]*data-reveal>').Count
 Check "found project cards ($projects)" ($projects -gt 0)
 $ld = [regex]::Match($index, '<script type="application/ld\+json">(.*?)</script>', 'Singleline').Groups[1].Value
 try { $json = $ld | ConvertFrom-Json; $okLd = $true } catch { $okLd = $false }

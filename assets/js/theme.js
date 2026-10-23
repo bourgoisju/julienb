@@ -1,15 +1,15 @@
 // Light / dark switch. The saved choice is applied before paint by the inline head script;
-// without a saved choice the system preference wins.
+// without a saved choice the site opens in dark.
 const KEY = 'theme';
-const darkQuery = matchMedia('(prefers-color-scheme: dark)');
 
-const current = () => document.documentElement.dataset.theme || (darkQuery.matches ? 'dark' : 'light');
+// Dark is the brand's signature: it is the default whatever the system preference.
+const current = () => document.documentElement.dataset.theme || 'dark';
 
 function apply(theme, button) {
   document.documentElement.dataset.theme = theme;
   button.setAttribute('aria-label', theme === 'dark' ? 'Passer en thème clair' : 'Passer en thème sombre');
   const meta = document.querySelectorAll('meta[name="theme-color"]');
-  meta.forEach((m) => m.setAttribute('content', theme === 'dark' ? '#0f0f0e' : '#f4f2ee'));
+  meta.forEach((m) => m.setAttribute('content', theme === 'dark' ? '#060a14' : '#f5f7fc'));
 }
 
 export function initTheme() {
