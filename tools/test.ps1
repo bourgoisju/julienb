@@ -32,7 +32,7 @@ foreach ($page in $pages) {
   $refs = [regex]::Matches($html, '(?:href|src)="([^"#][^"]*)"') | ForEach-Object { $_.Groups[1].Value }
   $refs += [regex]::Matches($html, 'srcset="([^"]+)"') | ForEach-Object { $_.Groups[1].Value -split ',' | ForEach-Object { ($_.Trim() -split '\s+')[0] } }
   $missing = $refs | Where-Object { $_ -notmatch '^(https?:|mailto:|tel:|data:)' } | Sort-Object -Unique |
-    Where-Object { -not (Test-Path (Join-Path $root ($_.TrimStart('/') -replace '/', '\'))) }
+    Where-Object { -not (Test-Path (Join-Path $root (($_ -replace '\?.*$', '').TrimStart('/') -replace '/', '\'))) }
   Check 'local references exist' (-not $missing) ($missing -join ', ')
 
   $imgs = [regex]::Matches($html, '<img\b[^>]*>') | ForEach-Object { $_.Value }
@@ -62,6 +62,15 @@ Check "meta description 50-170 chars ($($desc.Length))" ($desc.Length -ge 50 -an
 foreach ($tag in 'rel="canonical"', 'og:title', 'og:description', 'og:image"', 'og:url', 'twitter:card') {
   Check "has $tag" ($index -match [regex]::Escape($tag))
 }
+# Cache busting: CSS / JS (page + module imports) must carry ?v=, all with the same value.
+$mainJs = Read-Utf8 'assets\js\main.js'
+$assetRefs = @([regex]::Matches($index, '(?:href|src)="(assets/(?:css|js)/[^"]+)"') | ForEach-Object { $_.Groups[1].Value })
+$assetRefs += @([regex]::Matches($mainJs, "from '(\./[^']+)'") | ForEach-Object { $_.Groups[1].Value })
+$unversioned = $assetRefs | Where-Object { $_ -notmatch '\?v=' }
+Check 'CSS and JS references are versioned (?v=)' (-not $unversioned) ($unversioned -join ', ')
+$versions = $assetRefs | ForEach-Object { if ($_ -match '\?v=([^&]+)') { $Matches[1] } } | Sort-Object -Unique
+Check "one asset version everywhere ($($versions -join ', '))" (@($versions).Count -eq 1)
+
 $projects = [regex]::Matches($index, '<li class="project[ "][^>]*data-reveal>').Count
 Check "found project cards ($projects)" ($projects -gt 0)
 $ld = [regex]::Match($index, '<script type="application/ld\+json">(.*?)</script>', 'Singleline').Groups[1].Value

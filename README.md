@@ -61,3 +61,13 @@ Le dépôt est relié à Vercel : chaque envoi sur `main` publie le site. Aucune
 
 Les questions de la section « Questions » existent deux fois : dans la page (`<details>`) et dans le JSON-LD
 `FAQPage` en haut de `index.html` (lu par Google). Modifier les deux ensemble.
+
+## Cache des navigateurs (important)
+
+Les images sont gardées 30 jours par les navigateurs. Pour que les visiteurs voient tout de suite une mise à jour,
+les fichiers sont appelés avec un numéro de version : `styles.css?v=20261023`, `main.js?v=…`, les imports de
+`main.js` et les captures (`emconcept-720.jpg?v=…`).
+
+**À chaque mise en ligne qui modifie le CSS, le JS ou une image**, remplacer ce numéro partout par la date du jour
+(rechercher/remplacer `?v=20261023` dans `index.html`, `404.html` et `assets/js/main.js`).
+`tools/test.ps1` vérifie que le même numéro est utilisé partout.
