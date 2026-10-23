@@ -93,8 +93,17 @@ try { Read-Utf8 'site.webmanifest' | ConvertFrom-Json | Out-Null; $okManifest = 
 Check 'site.webmanifest parses' $okManifest
 Check 'sitemap.xml is valid XML' ($null -ne ([xml](Read-Utf8 'sitemap.xml')))
 
-$weight = (Get-ChildItem (Join-Path $root 'assets') -Recurse -File -Include *.css, *.js | Measure-Object Length -Sum).Sum
-Check "CSS + JS under 60 KB ($([math]::Round($weight / 1KB)) KB)" ($weight -lt 60KB)
+# Weight as actually transferred: LF line endings (a Windows checkout adds CR) and gzip compression.
+$raw = 0; $gz = 0
+Get-ChildItem (Join-Path $root 'assets') -Recurse -File -Include *.css, *.js | ForEach-Object {
+  $bytes = [Text.Encoding]::UTF8.GetBytes(([IO.File]::ReadAllText($_.FullName, [Text.Encoding]::UTF8) -replace "`r", ''))
+  $raw += $bytes.Length
+  $ms = New-Object IO.MemoryStream
+  $zip = New-Object IO.Compression.GZipStream($ms, [IO.Compression.CompressionMode]::Compress)
+  $zip.Write($bytes, 0, $bytes.Length); $zip.Close()
+  $gz += $ms.ToArray().Length
+}
+Check "CSS + JS under 25 KB gzipped ($([math]::Round($gz / 1KB)) KB, $([math]::Round($raw / 1KB)) KB raw)" ($gz -lt 25KB)
 $heavy = Get-ChildItem (Join-Path $root 'assets\img') -File | Where-Object Length -gt 200KB
 Check 'no image over 200 KB' (-not $heavy) (($heavy | ForEach-Object Name) -join ', ')
 

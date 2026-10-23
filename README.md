@@ -36,7 +36,7 @@ Puis ouvrir http://localhost:8081.
 powershell -ExecutionPolicy Bypass -File tools/test.ps1
 ```
 
-Les tests vérifient les liens et fichiers, les images (alt, dimensions, poids), les titres, le SEO (description,
+Les tests vérifient les liens et fichiers, les images (alt, dimensions, poids), le poids du CSS + JS (moins de 25 Ko compressés), les titres, le SEO (description,
 Open Graph, JSON-LD), la configuration (CSP, manifeste, sitemap), puis lancent la page dans Chrome sans interface
 pour vérifier que le JavaScript démarre sans erreur, sur ordinateur et sur téléphone.
 
