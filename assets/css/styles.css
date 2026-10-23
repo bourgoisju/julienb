@@ -584,3 +584,49 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .motion .section-head .kicker.is-visible::before, .motion .section-head .kicker.is-visible::after { transform: none; }
 /* Contact card keeps its light gradient AND the sweep layer */
 .contact-card .grad-text.shine { background-image: linear-gradient(105deg, transparent 38%, rgb(255 255 255 / .85) 50%, transparent 62%), linear-gradient(100deg, #3d7bff 0%, #6fb0ff 60%, #a9d1ff 100%); }
+
+/* Tech band: crossing ribbons between the hero and the projects ------------- */
+.tech-band { position: relative; height: clamp(150px, 15vw, 210px); overflow: hidden; isolation: isolate; }
+.tech-band::before {   /* faint glow behind the crossing point */
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(ellipse 40% 60% at 50% 50%, rgb(47 107 255 / .18), transparent 70%);
+}
+.ribbon {
+  position: absolute; left: -10%; right: -10%; top: 50%;
+  padding-block: clamp(11px, 1.3vw, 17px);
+  transform: translateY(-50%) rotate(calc(var(--rot) * var(--rot-k, 1)));
+}
+.ribbon-skills {
+  z-index: 2; background: var(--grad-btn); color: #fff;
+  box-shadow: 0 24px 50px -22px rgb(47 107 255 / .7), inset 0 1px 0 rgb(255 255 255 / .22);
+}
+.ribbon-code { z-index: 1; background: var(--surface); border-block: 1px solid var(--line-strong); }
+.ribbon-glide { transform: translateX(calc(var(--sx, 0) * var(--dir) * 1px)); }
+.ribbon-track { display: flex; width: max-content; animation: ribbon-loop 42s linear infinite; }
+.ribbon-code .ribbon-track { animation-duration: 58s; animation-direction: reverse; }
+@keyframes ribbon-loop { to { transform: translateX(-50%); } }
+.ribbon-skills span {
+  display: inline-flex; align-items: center; gap: clamp(18px, 2.4vw, 34px); padding-right: clamp(18px, 2.4vw, 34px);
+  font: 600 clamp(.95rem, 1.7vw, 1.3rem)/1 var(--display); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap;
+}
+.ribbon-skills span::after { content: "✦"; font-size: .7em; opacity: .75; }
+.ribbon-code span {
+  display: inline-flex; align-items: center; gap: clamp(16px, 2vw, 28px); padding-right: clamp(16px, 2vw, 28px);
+  font: 500 clamp(.8rem, 1.15vw, .98rem)/1 ui-monospace, "Cascadia Code", Consolas, "SFMono-Regular", monospace;
+  color: var(--muted); white-space: nowrap;
+}
+.ribbon-code span:nth-child(3n + 1) { color: var(--accent); }
+.ribbon-code span::after { content: "//"; color: var(--line-strong); }
+
+/* Entrance: ribbons unfold from flat and tilt into place */
+.motion .tech-band .ribbon { opacity: 0; transform: translateY(-50%) rotate(0deg) scaleX(.15); transition: opacity .8s var(--ease-out), transform 1.4s var(--ease-out); }
+.motion .tech-band .ribbon-skills { transition-delay: .18s; }
+.motion .tech-band.is-visible .ribbon { opacity: 1; transform: translateY(-50%) rotate(calc(var(--rot) * var(--rot-k, 1))) scaleX(1); }
+@media (prefers-reduced-motion: reduce) { .ribbon-track { animation: none; } }
+/* Narrow screens: the crossing angle is too small to separate the ribbons — move them apart and tilt more */
+@media (max-width: 760px) {
+  .tech-band { height: 170px; }
+  .ribbon { --rot-k: 1.7; }
+  .ribbon-code { top: 36%; }
+  .ribbon-skills { top: 64%; }
+}

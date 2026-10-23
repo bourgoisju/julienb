@@ -91,3 +91,26 @@ export function initParallax() {
   addEventListener('scroll', request, { passive: true });
   addEventListener('resize', request, { passive: true });
 }
+
+// Tech band: while it crosses the viewport, the two ribbons glide in opposite directions
+// (CSS multiplies --sx by each ribbon's --dir). Adds depth on top of their own looping scroll.
+export function initBand() {
+  const band = document.querySelector('[data-band]');
+  if (!band) return;
+  const RANGE = 160; // px of glide from entering to leaving the screen
+  let visible = false;
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    const box = band.getBoundingClientRect();
+    // -1 when the band enters at the bottom, +1 when it leaves at the top.
+    const t = (innerHeight / 2 - (box.top + box.height / 2)) / (innerHeight / 2 + box.height / 2);
+    band.style.setProperty('--sx', (Math.max(-1, Math.min(1, t)) * RANGE).toFixed(1));
+  };
+  const request = () => { if (visible && !ticking) { ticking = true; requestAnimationFrame(update); } };
+
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; request(); }).observe(band);
+  addEventListener('scroll', request, { passive: true });
+  addEventListener('resize', request, { passive: true });
+}
