@@ -382,8 +382,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .contact-card::before { content: ""; position: absolute; right: -20%; top: -40%; width: 70%; aspect-ratio: 1; z-index: -1; background: radial-gradient(closest-side, rgb(47 107 255 / .45), transparent 70%); }
 .contact-card .kicker { color: #8ec0ff; }
-.contact-card h2 { margin-top: 18px; font-size: var(--fs-h2); }
-.contact-card p:not(.kicker) { margin-top: 16px; color: #b9c5e0; font-size: var(--fs-lg); max-width: 40ch; }
+.contact-card h2 { margin-top: 18px; font-size: clamp(2rem, 3.6vw, 3.1rem); line-height: 1.08; }
+/* The card stays dark in both themes: keep the light gradient for its accent words */
+.contact-card .grad-text { background-image: linear-gradient(100deg, #3d7bff 0%, #6fb0ff 60%, #a9d1ff 100%); }
+.contact-card p:not(.kicker) { margin-top: 16px; color: #b9c5e0; font-size: var(--fs-lg); max-width: 44ch; }
+.contact-card p.contact-tagline { margin-top: 22px; padding-left: 16px; border-left: 2px solid var(--blue-3); color: #f2f5fc; font: 500 clamp(1.08rem, 1.6vw, 1.25rem)/1.4 var(--display); }
+.contact-cta { margin-top: 28px; }
+.contact-card p { text-wrap: pretty; }
+.contact-card p.contact-tagline { text-wrap: balance; }
 .contact-list { display: grid; gap: 14px; }
 .contact-link {
   display: flex; align-items: center; gap: 16px; padding: 18px 20px; border-radius: 16px; text-decoration: none;
@@ -392,6 +398,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .contact-link:hover { background: rgb(255 255 255 / .09); border-color: rgb(160 190 255 / .4); transform: translateX(4px); }
 .contact-icon { display: grid; place-items: center; width: 48px; height: 48px; flex: none; border-radius: 14px; background: var(--grad); color: #fff; box-shadow: var(--shadow-blue); }
+.contact-icon-wa { background: linear-gradient(135deg, #25d366, #128c4a); box-shadow: 0 20px 50px -20px rgb(37 211 102 / .55); }
 .contact-link small { display: block; font: 600 .7rem/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: #8ec0ff; margin-bottom: 6px; }
 .contact-link b { font: 600 clamp(1.1rem, 2vw, 1.4rem)/1.2 var(--display); overflow-wrap: anywhere; }
 
