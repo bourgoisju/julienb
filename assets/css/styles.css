@@ -559,3 +559,28 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .motion .note-accent > span::after { transform: scaleX(0); transition: transform 1s var(--ease-out) 2s; }
 .motion .steps-note.is-visible .note-accent > span::after { transform: none; }
 .motion .steps-note.is-visible .shine { animation: shine 8s ease-in-out 2.5s infinite; }
+
+/* Section titles (split into words by assets/js/titles.js) ------------------
+   Played when the title — or the card holding it — comes into view:
+   kicker strokes draw outward · words rise one by one with a slight tilt ·
+   gradient part wiped in left to right · light sweep (then every 9 s). */
+.title-anim .tw { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .12em; margin-bottom: -.12em; }
+.title-anim .tw > span, .title-anim .tw-grad { display: inline-block; }
+.motion .title-anim.reveal { opacity: 1; transform: none; }
+.motion .title-anim .tw > span {
+  transform: translateY(135%) rotate(3deg); transform-origin: left bottom;
+  transition: transform 1s var(--ease-out); transition-delay: calc(var(--w, 0) * 70ms + 150ms);
+}
+.motion .title-anim .tw-grad {
+  clip-path: inset(-15% 100% -15% 0);
+  transition: clip-path 1.1s var(--ease-in-out); transition-delay: calc(var(--w, 0) * 70ms + 250ms);
+}
+.motion .title-anim.is-visible .tw > span, .motion .is-visible .title-anim .tw > span { transform: none; }
+.motion .title-anim.is-visible .tw-grad, .motion .is-visible .title-anim .tw-grad { clip-path: inset(-15% -3% -15% 0); }
+.motion .title-anim.is-visible .shine, .motion .is-visible .title-anim .shine { animation: shine 9s ease-in-out 1.8s infinite; }
+
+.motion .section-head .kicker::before { transform: scaleX(0); transform-origin: right; transition: transform .9s var(--ease-out) .1s; }
+.motion .section-head .kicker::after { transform: scaleX(0); transform-origin: left; transition: transform .9s var(--ease-out) .1s; }
+.motion .section-head .kicker.is-visible::before, .motion .section-head .kicker.is-visible::after { transform: none; }
+/* Contact card keeps its light gradient AND the sweep layer */
+.contact-card .grad-text.shine { background-image: linear-gradient(105deg, transparent 38%, rgb(255 255 255 / .85) 50%, transparent 62%), linear-gradient(100deg, #3d7bff 0%, #6fb0ff 60%, #a9d1ff 100%); }

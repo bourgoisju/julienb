@@ -13,7 +13,8 @@ assets/js/main.js         Point d'entrée (modules ES) — chaque module amélio
 assets/js/theme.js        Bascule clair / sombre, mémorisée dans le navigateur
 assets/js/motion.js       En-tête, apparitions au défilement, parallaxe des captures
 assets/js/devices.js      Écrans de l'ordinateur et du téléphone du hero (rotation des sites, inclinaison à la souris)
-assets/js/effects.js      Bouton aimanté, compteur animé
+assets/js/effects.js      Bouton aimanté
+assets/js/titles.js       Découpe les titres de section en mots pour leur animation d'entrée
 assets/js/preview.js      Aperçu en direct des sites dans une fenêtre (ordinateur / mobile, flèches, Échap)
 assets/js/cursor.js       Bulle « Voir » qui suit la souris sur les captures
 assets/img/               Captures ordinateur (720 et 1440 px) et mobile (nom-mobile.jpg, 390 px), partage, icônes
@@ -65,9 +66,9 @@ Les questions de la section « Questions » existent deux fois : dans la page (`
 ## Cache des navigateurs (important)
 
 Les images sont gardées 30 jours par les navigateurs. Pour que les visiteurs voient tout de suite une mise à jour,
-les fichiers sont appelés avec un numéro de version : `styles.css?v=20261024i`, `main.js?v=…`, les imports de
+les fichiers sont appelés avec un numéro de version : `styles.css?v=20261024j`, `main.js?v=…`, les imports de
 `main.js` et les captures (`emconcept-720.jpg?v=…`).
 
 **À chaque mise en ligne qui modifie le CSS, le JS ou une image**, remplacer ce numéro partout par la date du jour
-(rechercher/remplacer `?v=20261024i` dans `index.html`, `404.html` et `assets/js/main.js`).
+(rechercher/remplacer `?v=20261024j` dans `index.html`, `404.html` et `assets/js/main.js`).
 `tools/test.ps1` vérifie que le même numéro est utilisé partout.
