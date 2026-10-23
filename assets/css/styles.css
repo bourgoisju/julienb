@@ -525,6 +525,32 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* Method closing line */
 .steps-note {
-  margin: clamp(48px, 6vw, 80px) auto 0; padding-top: 28px; max-width: 760px; border-top: 1px solid var(--line);
+  position: relative; margin: clamp(48px, 6vw, 80px) auto 0; padding-top: 32px; max-width: 760px;
   text-align: center; font: 600 clamp(1.2rem, 2.2vw, 1.6rem)/1.35 var(--display); letter-spacing: -.015em; text-wrap: balance;
 }
+/* Rule above: glowing blue in the middle, fading to the edges */
+.steps-note::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong) 20%, var(--blue-3) 50%, var(--line-strong) 80%, transparent);
+}
+.note-line { display: block; }
+.note-line .w { display: inline-block; }
+.note-accent > span { position: relative; display: inline-block; padding-bottom: .12em; }
+/* Stroke under the second sentence */
+.note-accent > span::after {
+  content: ""; position: absolute; left: 10%; right: 10%; bottom: -.05em; height: 2px; border-radius: 2px;
+  background: var(--grad); box-shadow: 0 0 12px rgb(47 107 255 / .6); transform-origin: center;
+}
+
+/* Animation, played when the line itself comes into view (~3 s):
+   0.0 s rule draws from the centre · 0.3 s words of the first sentence rise out of a blur, one by one
+   1.0 s second sentence wiped in left to right · 2.0 s stroke draws · 2.5 s light sweep (then every 8 s) */
+.motion .steps-note::before { transform: scaleX(0); transition: transform 1.2s var(--ease-out); }
+.motion .steps-note.is-visible::before { transform: none; }
+.motion .steps-note .w { opacity: 0; transform: translateY(.55em); filter: blur(6px); transition: opacity .8s var(--ease-out), transform 1s var(--ease-out), filter .8s var(--ease-out); transition-delay: calc(var(--w) * 120ms + 300ms); }
+.motion .steps-note.is-visible .w { opacity: 1; transform: none; filter: none; }
+.motion .note-accent > span { clip-path: inset(-20% 100% -20% 0); transition: clip-path 1.3s var(--ease-in-out) 1s; }
+.motion .steps-note.is-visible .note-accent > span { clip-path: inset(-20% -2% -20% 0); }
+.motion .note-accent > span::after { transform: scaleX(0); transition: transform 1s var(--ease-out) 2s; }
+.motion .steps-note.is-visible .note-accent > span::after { transform: none; }
+.motion .steps-note.is-visible .shine { animation: shine 8s ease-in-out 2.5s infinite; }
