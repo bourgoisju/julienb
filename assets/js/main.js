@@ -1,11 +1,11 @@
 // Entry point. Each module enhances markup that already works without JavaScript.
-import { initTheme } from './theme.js?v=20261024k';
-import { initHeader, initReveal, initParallax, initBand } from './motion.js?v=20261024k';
-import { initPreview } from './preview.js?v=20261024k';
-import { initCursor } from './cursor.js?v=20261024k';
-import { initMagnetic } from './effects.js?v=20261024k';
-import { initDevices } from './devices.js?v=20261024k';
-import { initTitles } from './titles.js?v=20261024k';
+import { initTheme } from './theme.js?v=20261025';
+import { initHeader, initReveal, initParallax, initBand, initBandLoop } from './motion.js?v=20261025';
+import { initPreview } from './preview.js?v=20261025';
+import { initCursor } from './cursor.js?v=20261025';
+import { initMagnetic } from './effects.js?v=20261025';
+import { initDevices } from './devices.js?v=20261025';
+import { initTitles } from './titles.js?v=20261025';
 
 const root = document.documentElement;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -19,10 +19,16 @@ initHeader();
 if (!reducedMotion.matches) initTitles();
 initReveal();
 initPreview();
+initBandLoop();
 initDevices({ motion: !reducedMotion.matches });
+// Scroll-linked effects only with a mouse / trackpad: on phones they cost a style recalculation
+// every frame of the scroll, for an effect barely visible on a small screen.
+const finePointer = matchMedia("(hover: hover) and (pointer: fine)").matches;
 if (!reducedMotion.matches) {
-  initParallax();
-  initBand();
+  if (finePointer) {
+    initParallax();
+    initBand();
+  }
   initCursor();
   initMagnetic();
 }

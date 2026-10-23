@@ -114,3 +114,10 @@ export function initBand() {
   addEventListener('scroll', request, { passive: true });
   addEventListener('resize', request, { passive: true });
 }
+
+// Ribbons loop only while the band is on screen (saves battery and frames on phones).
+export function initBandLoop() {
+  const band = document.querySelector('[data-band]');
+  if (!band || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(([e]) => band.classList.toggle('is-onscreen', e.isIntersecting)).observe(band);
+}

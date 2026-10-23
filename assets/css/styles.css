@@ -630,3 +630,23 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .ribbon-code { top: 36%; }
   .ribbon-skills { top: 64%; }
 }
+
+/* Performance on phones & touch screens ---------------------------------------
+   Continuous effects that force repaints (animated text gradients, SVG folds, button sheen)
+   and the header's backdrop blur are desktop-only. */
+.ribbon-track { will-change: transform; animation-play-state: paused; }
+.tech-band.is-onscreen .ribbon-track { animation-play-state: running; }
+@media (hover: none), (pointer: coarse), (max-width: 760px) {
+  .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; background: color-mix(in srgb, var(--bg) 96%, transparent); }
+  .folds .f1, .folds .f2, .folds .f3 { animation: none; }
+  .btn-primary::after { display: none; }
+  .motion .hero.is-visible .shine, .motion .steps-note.is-visible .shine,
+  .motion .title-anim.is-visible .shine, .motion .is-visible .title-anim .shine { animation: none; }
+  .project-shot img { transform: none; transition: none; }
+}
+/* Phones: same choreography, but only opacity + transform (no letter-spacing reflow, no blur repaints) */
+@media (hover: none), (pointer: coarse), (max-width: 760px) {
+  .motion .h1-intro { letter-spacing: -.01em; filter: none; transform: translateY(14px); transition: opacity 1s var(--ease-out) .2s, transform 1.2s var(--ease-out) .2s; }
+  .motion .hero.is-visible .h1-intro { transform: none; }
+  .motion .hero h1 .line > span, .motion .hero-visual, .motion .steps-note .w { filter: none; }
+}
