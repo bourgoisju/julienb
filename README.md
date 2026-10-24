@@ -71,7 +71,7 @@ Les questions de la page Prestations existent deux fois : dans la page (`<detail
 ## Cache des navigateurs (important)
 
 Les images sont gardées 30 jours par les navigateurs. Pour que les visiteurs voient tout de suite une mise à jour,
-les fichiers sont appelés avec un numéro de version : `styles.css?v=20261024j`, `main.js?v=…`, les imports de
+les fichiers sont appelés avec un numéro de version : `styles.css?v=20261024k`, `main.js?v=…`, les imports de
 `main.js` et les captures (`emconcept-720.jpg?v=…`).
 
 **À chaque mise en ligne qui modifie le CSS, le JS ou une image**, remplacer ce numéro partout par la date du jour

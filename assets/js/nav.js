@@ -20,5 +20,5 @@ export function initNav() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !menu.hidden) { setOpen(false); button.focus(); }
   });
-  matchMedia('(min-width: 1341px)').addEventListener('change', (e) => { if (e.matches) setOpen(false); });
+  matchMedia('(min-width: 1421px)').addEventListener('change', (e) => { if (e.matches) setOpen(false); });
 }
