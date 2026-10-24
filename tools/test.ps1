@@ -33,7 +33,7 @@ function Local-File([string]$ref) {
   return $null
 }
 
-$pages = Get-ChildItem $root -Filter *.html | ForEach-Object Name | Sort-Object
+$pages = @(Get-ChildItem $root -Filter *.html | ForEach-Object Name) + @(Get-ChildItem (Join-Path $root 'blog') -Filter *.html | ForEach-Object { "blog/$($_.Name)" }) | Sort-Object
 $contentPages = $pages | Where-Object { $_ -ne '404.html' }
 $html = @{}; foreach ($p in $pages) { $html[$p] = Read-Utf8 $p }
 $sitemap = Read-Utf8 'sitemap.xml'
@@ -93,7 +93,8 @@ foreach ($part in @(@('header menu', '(?s)<ul class="nav" data-nav>.*?</ul>'), @
   $variants = @($contentPages | ForEach-Object { & $norm ([regex]::Match($html[$_], $part[1]).Value) } | Sort-Object -Unique)
   Check "$($part[0]) identical on every page" (@($variants).Count -eq 1 -and $variants[0].Length -gt 20)
 }
-$current = $contentPages | Where-Object { $_ -ne 'index.html' -and $_ -ne 'mentions-legales.html' } | Where-Object {
+$navHrefs = [regex]::Matches([regex]::Match($html['index.html'], '(?s)<ul class="nav" data-nav>.*?</ul>').Value, 'href="/([a-z-]+)"') | ForEach-Object { $_.Groups[1].Value }
+$current = $contentPages | Where-Object { $navHrefs -contains ($_ -replace '.html$', '') } | Where-Object {
   $html[$_] -notmatch ('<ul class="nav" data-nav>(?s:.*?)href="/' + [regex]::Escape(($_ -replace '\.html$', '')) + '" aria-current="page"') }
 Check 'each page marks itself in the menu (aria-current)' (-not $current) ($current -join ', ')
 

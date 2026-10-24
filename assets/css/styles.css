@@ -676,6 +676,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* Multi-page ------------------------------------------------------------------ */
 /* Inner pages: first section sits closer to the header */
 .page-first { padding-top: clamp(48px, 7vw, 104px); }
+.page-first:has(.section-head:last-child) { padding-bottom: 0; }
+.page-first:has(.section-head:last-child) .section-head { margin-bottom: 0; }
 .section-more { margin-top: clamp(32px, 4vw, 48px); text-align: center; }
 
 /* Phone menu */
@@ -689,9 +691,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .mobile-menu a[aria-current="page"] { color: var(--accent); }
 .mobile-menu .btn { margin-top: 14px; width: 100%; }
 /* Desktop menu needs ~1180 px (4 entries + call to action); below, the phone menu takes over */
-@media (max-width: 1180px) { .nav { display: none; } .menu-btn { display: inline-grid; } }
-@media (max-width: 1300px) { .brand-text small { display: none; } }
-@media (min-width: 1181px) { .mobile-menu { display: none !important; } }
+@media (max-width: 1340px) { .nav { display: none; } .menu-btn { display: inline-grid; } }
+@media (max-width: 1720px) { .brand-text small { display: none; } }
+@media (min-width: 1341px) { .mobile-menu { display: none !important; } }
 
 /* Home: service previews */
 .mini-offers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
@@ -718,4 +720,65 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 960px) {
   .mini-offers { grid-template-columns: 1fr; }
   .cta-card { grid-template-columns: 1fr; }
+}
+
+/* Landing pages (villes, publics), blog, footer site map ------------------------ */
+/* Breadcrumb */
+.crumbs { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 10px; margin-bottom: 22px; font-size: var(--fs-label); color: var(--muted); }
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--ink); }
+.crumbs li + li::before { content: "/"; margin-right: 10px; color: var(--line-strong); }
+
+/* Feature cards (needs of an audience, local strengths) */
+.features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.feature { padding: 28px 26px; }
+.feature-icon { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 18px; border-radius: 12px; border: 1px solid var(--line-strong); color: var(--accent); font: 600 .95rem var(--display); }
+.feature h3 { font-size: 1.25rem; }
+.feature p { margin-top: 10px; color: var(--muted); }
+
+/* Link cards (audiences, zones, articles) */
+.link-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.link-card { display: flex; flex-direction: column; gap: 10px; height: 100%; padding: 22px 22px 20px; text-decoration: none; }
+.link-card b { font: 600 1.15rem/1.25 var(--display); }
+.link-card small { color: var(--muted); font-size: var(--fs-sm); }
+.link-card .link-arrow { margin-top: auto; font-size: var(--fs-sm); }
+
+/* Compact project cards (landing pages) */
+.mini-works { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.mini-work { display: block; height: 100%; padding: 12px; text-decoration: none; }
+.mini-work img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 10px; border: 1px solid var(--line); }
+.mini-work-body { display: grid; gap: 4px; padding: 14px 6px 6px; }
+.mini-work-body b { font: 600 1.2rem/1.2 var(--display); }
+.mini-work-body small { color: var(--muted); font-size: var(--fs-sm); }
+
+/* Long-form text (blog, about) */
+.prose { max-width: 720px; margin-inline: auto; font-size: 1.06rem; line-height: 1.75; color: var(--ink-2); }
+.prose > * + * { margin-top: 1.1em; }
+.prose h2 { margin-top: 2.2em; font-size: clamp(1.45rem, 2.4vw, 1.85rem); color: var(--ink); }
+.prose h3 { margin-top: 1.8em; font-size: 1.2rem; color: var(--ink); }
+.prose ul, .prose ol { padding-left: 1.2em; list-style: revert; }
+.prose li + li { margin-top: .45em; }
+.prose li::marker { color: var(--accent); }
+.prose a { color: var(--accent); }
+.prose strong { color: var(--ink); }
+.prose .lede { font-size: 1.2rem; color: var(--ink); }
+.prose .callout { padding: 18px 22px; border-left: 3px solid var(--blue-3); border-radius: 0 12px 12px 0; background: var(--surface); }
+.article-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; margin-top: 4px; font-size: var(--fs-sm); color: var(--muted); }
+
+/* Footer site map */
+.footer-explore { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 3fr); gap: clamp(32px, 5vw, 64px); padding-block: clamp(48px, 6vw, 72px) 32px; }
+.footer-about p { margin-top: 14px; max-width: 34ch; color: var(--muted); font-size: var(--fs-sm); }
+.footer-about ul { display: grid; gap: 6px; margin-top: 16px; font-size: var(--fs-sm); }
+.footer-about a { color: var(--ink-2); text-decoration: none; }
+.footer-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.footer-title { margin-bottom: 12px; font: 600 var(--fs-label)/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.footer-cols ul { display: grid; gap: 8px; font-size: var(--fs-sm); }
+.footer-cols a { color: var(--muted); text-decoration: none; transition: color var(--dur-fast); }
+.footer-cols a:hover { color: var(--ink); }
+.footer-inner { border-top: 1px solid var(--line); }
+
+@media (max-width: 960px) {
+  .features { grid-template-columns: 1fr; }
+  .footer-explore { grid-template-columns: 1fr; }
+  .footer-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
