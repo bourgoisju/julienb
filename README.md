@@ -51,7 +51,7 @@ pour vérifier que le JavaScript démarre sans erreur, sur ordinateur et sur té
    `chrome --headless=new --hide-scrollbars --window-size=1440,900 --screenshot=nom.png https://...`
 2. L'exporter en JPEG en 720 px et 1440 px de large (`nom-720.jpg`, `nom-1440.jpg`) dans `assets/img/`.
 3. Dans `realisations.html`, copier un bloc `<li class="project card" ...>` puis changer numéro, textes, images,
-   `href`, `data-title` et `data-meta` ; ajouter aussi la carte d'aperçu sur l'accueil (`.mini-works` dans `index.html`).
+   `href`, `data-title` et `data-meta` ; recopier aussi la fiche sur l'accueil (`<ol class="works">` dans `index.html`).
 4. Ajouter le site dans les écrans du hero (capture mobile `nom-mobile.jpg` en 390 px de large) et dans le JSON-LD (haut de `realisations.html`) et son adresse dans `frame-src` de `vercel.json`
    (sinon l'aperçu en direct est bloqué en production).
 5. Lancer `tools/test.ps1` : il signale tout oubli des étapes 3 et 4.
@@ -71,7 +71,7 @@ Les questions de la page Prestations existent deux fois : dans la page (`<detail
 ## Cache des navigateurs (important)
 
 Les images sont gardées 30 jours par les navigateurs. Pour que les visiteurs voient tout de suite une mise à jour,
-les fichiers sont appelés avec un numéro de version : `styles.css?v=20261026`, `main.js?v=…`, les imports de
+les fichiers sont appelés avec un numéro de version : `styles.css?v=20261024c`, `main.js?v=…`, les imports de
 `main.js` et les captures (`emconcept-720.jpg?v=…`).
 
 **À chaque mise en ligne qui modifie le CSS, le JS ou une image**, remplacer ce numéro partout par la date du jour
