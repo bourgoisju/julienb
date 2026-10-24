@@ -10,7 +10,7 @@ index.html                Accueil : accroche + appareils, rubans, aperçus des r
 realisations.html         Exemples de mes réalisations (projets complets + aperçu en direct)
 prestations.html          Prestations, méthode et questions fréquentes
 contact.html              Contact (téléphone, WhatsApp, e-mail)
-mentions-legales.html     Mentions légales
+drafts/                   Brouillons non publiés (.vercelignore) : mentions légales à compléter
 404.html                  Page « introuvable » servie par Vercel
 assets/css/styles.css     Styles : jetons (couleurs, typo, espacements, mouvements) en tête, puis composants
 assets/js/main.js         Point d'entrée (modules ES) — chaque module améliore un HTML qui marche déjà sans JS
