@@ -1,11 +1,12 @@
 // Entry point. Each module enhances markup that already works without JavaScript.
-import { initTheme } from './theme.js?v=20261025b';
-import { initHeader, initReveal, initParallax, initBand, initBandLoop } from './motion.js?v=20261025b';
-import { initPreview } from './preview.js?v=20261025b';
-import { initCursor } from './cursor.js?v=20261025b';
-import { initMagnetic } from './effects.js?v=20261025b';
-import { initDevices } from './devices.js?v=20261025b';
-import { initTitles } from './titles.js?v=20261025b';
+import { initTheme } from './theme.js?v=20261026';
+import { initHeader, initReveal, initParallax, initBand, initBandLoop } from './motion.js?v=20261026';
+import { initPreview } from './preview.js?v=20261026';
+import { initCursor } from './cursor.js?v=20261026';
+import { initMagnetic } from './effects.js?v=20261026';
+import { initDevices } from './devices.js?v=20261026';
+import { initTitles } from './titles.js?v=20261026';
+import { initNav } from './nav.js?v=20261026';
 
 const root = document.documentElement;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -14,6 +15,7 @@ const year = document.querySelector('[data-year]');
 if (year) year.textContent = String(new Date().getFullYear());
 
 initTheme();
+initNav();
 initHeader();
 // Split titles before the reveal observer starts, so their first appearance is animated.
 if (!reducedMotion.matches) initTitles();

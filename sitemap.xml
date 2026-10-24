@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://julienb.vercel.app/</loc>
-    <lastmod>2026-10-15</lastmod>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://julienb.vercel.app/</loc><lastmod>2026-10-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://julienb.vercel.app/realisations</loc><lastmod>2026-10-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://julienb.vercel.app/prestations</loc><lastmod>2026-10-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://julienb.vercel.app/contact</loc><lastmod>2026-10-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://julienb.vercel.app/mentions-legales</loc><lastmod>2026-10-24</lastmod><priority>0.2</priority></url>
 </urlset>

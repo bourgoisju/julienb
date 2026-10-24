@@ -19,7 +19,8 @@ export function initHeader() {
   }, { passive: true });
 
   // Highlight the nav entry of the section in view.
-  const links = [...document.querySelectorAll('[data-nav] a')];
+  // Only in-page links (#section) are spied on; links to other pages keep their static aria-current.
+  const links = [...document.querySelectorAll('[data-nav] a')].filter((a) => a.hash && a.pathname === location.pathname);
   const sections = links.map((a) => document.querySelector(a.hash)).filter(Boolean);
   if (!('IntersectionObserver' in window) || !sections.length) return;
   const spy = new IntersectionObserver((entries) => {

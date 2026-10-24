@@ -2,7 +2,7 @@
 // (styles.css § Motion, .title-anim). The gradient part stays one unit: it is wiped in, then a light
 // sweep crosses it. Text, spacing and line breaks are unchanged, so search engines and screen readers
 // read the same sentence.
-const SELECTOR = '.section-head h2, .contact-card h2';
+const SELECTOR = '.section-head h1, .section-head h2, .contact-card h1, .contact-card h2';
 
 export function initTitles() {
   document.querySelectorAll(SELECTOR).forEach((title) => {

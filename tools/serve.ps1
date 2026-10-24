@@ -19,7 +19,11 @@ while ($listener.IsListening) {
   $path = [Uri]::UnescapeDataString($ctx.Request.Url.AbsolutePath).TrimStart('/')
   if ($path -eq '' -or $path.EndsWith('/')) { $path += 'index.html' }
   $file = [IO.Path]::GetFullPath((Join-Path $root $path))
+  # Clean URLs, like Vercel's "cleanUrls": /prestations serves prestations.html
+  if (-not (Test-Path $file -PathType Leaf) -and -not [IO.Path]::GetExtension($file)) { $file += '.html' }
   $res = $ctx.Response
+  # Unknown address: the site's own 404 page, with a 404 status
+  if (-not (Test-Path $file -PathType Leaf)) { $res.StatusCode = 404; $file = Join-Path $root '404.html' }
   if ($file.StartsWith($root) -and (Test-Path $file -PathType Leaf)) {
     $ext = [IO.Path]::GetExtension($file).ToLower()
     $res.ContentType = if ($types.ContainsKey($ext)) { $types[$ext] } else { 'application/octet-stream' }
