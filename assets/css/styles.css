@@ -679,6 +679,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .page-first { padding-top: clamp(48px, 7vw, 104px); }
 .page-first:has(.section-head:last-child) { padding-bottom: 0; }
 .page-first:has(.section-head:last-child) .section-head { margin-bottom: 0; }
+.page-first:has(.section-head:last-child) + .section { padding-top: clamp(32px, 4vw, 56px); }
 .section-more { margin-top: clamp(32px, 4vw, 48px); text-align: center; }
 
 /* Phone menu */
