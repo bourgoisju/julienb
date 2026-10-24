@@ -692,9 +692,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .mobile-menu a[aria-current="page"] { color: var(--accent); }
 .mobile-menu .btn { margin-top: 14px; width: 100%; }
 /* Desktop menu needs ~1180 px (4 entries + call to action); below, the phone menu takes over */
-@media (max-width: 1420px) { .nav { display: none; } .menu-btn { display: inline-grid; } }
-@media (max-width: 1820px) { .brand-text small { display: none; } }
-@media (min-width: 1421px) { .mobile-menu { display: none !important; } }
+@media (max-width: 1340px) { .nav { display: none; } .menu-btn { display: inline-grid; } }
+@media (max-width: 1720px) { .brand-text small { display: none; } }
+@media (min-width: 1341px) { .mobile-menu { display: none !important; } .header-end [data-theme-toggle] { display: none; } }
 
 /* Home: service previews */
 .mini-offers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
