@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refonte de site web — Julien Bourgois</title>
+  <meta name="description" content="Refonte de site web : nouveau design, pages et contenus réorganisés, meilleure expérience mobile et référencement existant préservé grâce aux redirections. Sur devis.">
+  <link rel="canonical" href="https://julienb.vercel.app/refonte-site-web">
+  <meta name="theme-color" content="#060a14">
+  <!-- Before first paint: saved theme + opt-in to motion (removed again if main.js never boots). -->
+  <script>(()=>{const d=document.documentElement;try{const t=localStorage.getItem('theme');if(t==='light'||t==='dark')d.dataset.theme=t}catch(e){}if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('motion');setTimeout(()=>{if(!d.classList.contains('is-ready'))d.classList.remove('motion')},2500)}})()</script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Julien Bourgois — Studio de création web">
+  <meta property="og:title" content="Refonte de site web — Julien Bourgois">
+  <meta property="og:description" content="Refonte de site web : nouveau design, pages et contenus réorganisés, meilleure expérience mobile et référencement existant préservé grâce aux redirections. Sur devis.">
+  <meta property="og:url" content="https://julienb.vercel.app/refonte-site-web">
+  <meta property="og:image" content="https://julienb.vercel.app/assets/img/og-image.jpg?v=20261024j">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julien Bourgois, studio de création web : le web à la hauteur de votre savoir-faire.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261024j">
+  <script type="module" src="/assets/js/main.js?v=20261024j"></script>
+  <link rel="modulepreload" href="/assets/js/theme.js?v=20261024j">
+  <link rel="modulepreload" href="/assets/js/motion.js?v=20261024j">
+  <link rel="modulepreload" href="/assets/js/nav.js?v=20261024j">
+  <link rel="modulepreload" href="/assets/js/preview.js?v=20261024j">
+  <link rel="modulepreload" href="/assets/js/cursor.js?v=20261024j">
+  <link rel="modulepreload" href="/assets/js/effects.js?v=20261024j">
+  <link rel="modulepreload" href="/assets/js/devices.js?v=20261024j">
+  <link rel="modulepreload" href="/assets/js/titles.js?v=20261024j">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://julienb.vercel.app/#julien",
+        "name": "Julien Bourgois",
+        "url": "https://julienb.vercel.app/",
+        "jobTitle": "Créateur de sites web",
+        "telephone": "+33674887585",
+        "email": "bourgois.ju@gmail.com"
+      },
+      {
+        "@type": "Service",
+        "name": "Refonte de site web",
+        "serviceType": "Création de site vitrine",
+        "description": "Refonte de site web : nouveau design, pages et contenus réorganisés, meilleure expérience mobile et référencement existant préservé grâce aux redirections. Sur devis.",
+        "provider": { "@id": "https://julienb.vercel.app/#julien" },
+        "areaServed": { "@type": "Country", "name": "France" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Vais-je perdre mon référencement ?", "acceptedAnswer": { "@type": "Answer", "text": "Le référencement existant est pris en compte dès l'analyse : les adresses de vos anciennes pages sont redirigées vers les nouvelles pour préserver ce qui a été construit." } },
+          { "@type": "Question", "name": "Peut-on garder certains contenus ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. L'analyse de l'existant permet de choisir ce qui mérite d'être conservé, retravaillé ou remplacé." } },
+          { "@type": "Question", "name": "Combien coûte une refonte ?", "acceptedAnswer": { "@type": "Answer", "text": "Chaque refonte est sur devis : le prix dépend de l'état du site actuel, du nombre de pages et des contenus à reprendre. Le devis est gratuit et sans engagement." } }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://julienb.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Prestations", "item": "https://julienb.vercel.app/prestations" },
+          { "@type": "ListItem", "position": 3, "name": "Refonte de site web", "item": "https://julienb.vercel.app/refonte-site-web" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head><body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4ed8"/><stop offset=".55" stop-color="#2f6bff"/><stop offset="1" stop-color="#5aa2ff"/></linearGradient></defs>
+          <rect width="40" height="40" rx="11" fill="#0b1226"/>
+          <path d="M9 27 17 9h7l-8 18z" fill="url(#bm)"/><path d="M16 27l8-18h7l-8 18z" fill="url(#bm)" opacity=".55"/><path d="M9 27h14l-3 4H6z" fill="#5aa2ff" opacity=".9"/>
+        </svg>
+        <span class="brand-text"><strong>Julien Bourgois</strong><small>Studio de création web — Design digital</small></span>
+      </a>
+      <div class="header-end">
+        <nav aria-label="Navigation principale">
+          <ul class="nav" data-nav>
+            <li><a href="/realisations">Exemples de mes réalisations</a></li>
+            <li><a href="/prestations" aria-current="page">Prestations</a></li>
+            <li><a href="/qui-je-suis">Qui suis-je</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#faq">Questions</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn-primary btn-sm header-cta" href="/contact" data-magnetic>Discutons de votre projet</a>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Passer en thème clair">
+          <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Phone menu (assets/js/nav.js) -->
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Menu" hidden data-menu>
+      <ul class="container">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/realisations">Exemples de mes réalisations</a></li>
+        <li><a href="/prestations" aria-current="page">Prestations</a></li>
+        <li><a href="/qui-je-suis">Qui suis-je</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/#faq">Questions</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a class="btn btn-primary" href="/contact">Discutons de votre projet</a></li>
+      </ul>
+    </nav>
+    <span class="scroll-progress" aria-hidden="true" data-progress></span>
+  </header>
+
+  <main id="main">
+    <section class="section page-first" aria-labelledby="page-title">
+      <div class="container">
+        <header class="section-head">
+          <nav aria-label="Fil d'Ariane"><ol class="crumbs"><li><a href="/">Accueil</a></li><li><a href="/prestations">Prestations</a></li><li aria-current="page">Refonte de site web</li></ol></nav>
+          <p class="kicker reveal">Prestation 02 · Refonte de site web</p>
+          <h1 id="page-title" class="reveal" style="--i:1">Votre entreprise a évolué. <span class="grad-text">Votre image en ligne aussi doit évoluer.</span></h1>
+          <p class="reveal" style="--i:2">Un site vieillissant ou mal organisé peut donner une image qui ne correspond plus à la qualité de votre travail. La refonte permet de repenser le design, la structure et les contenus pour retrouver une présence en ligne cohérente avec vos ambitions.</p>
+        </header>
+      </div>
+    </section>
+    <section class="section" aria-label="Ce qui est inclus">
+      <div class="container service-split" data-reveal>
+        <div class="prose reveal">
+<h2>Repartir de ce qui existe</h2>
+<p>Une refonte commence par l'analyse de votre site actuel : ce qui fonctionne, ce qui freine vos visiteurs, et ce que votre activité est devenue depuis sa création.</p>
+<p>Le design est ensuite repensé, les pages et les contenus réorganisés, la navigation et l'expérience mobile améliorées, pour un site qui vous ressemble à nouveau.</p>
+<p>Le référencement que vous avez déjà construit est pris en compte : les adresses de vos anciennes pages sont redirigées vers les nouvelles, pour ne pas perdre vos visiteurs ni votre place sur Google.</p>
+        </div>
+        <aside class="offer card reveal" style="--i:2">
+          <p class="offer-tag"><span class="offer-num">02</span>Refonte de site web</p>
+          <h2 class="offer-title">Ce qui est inclus</h2>
+          <ul>
+              <li>Analyse de l'existant et de vos besoins</li>
+              <li>Nouvelle direction visuelle</li>
+              <li>Réorganisation des pages et des contenus</li>
+              <li>Amélioration de la navigation et de l'expérience mobile</li>
+              <li>Prise en compte du référencement existant</li>
+              <li>Préparation des redirections nécessaires</li>
+              <li>Mise en ligne après validation</li>
+          </ul>
+          <div class="offer-foot">
+            <p class="offer-price">Tarif : sur devis personnalisé</p>
+            <a class="btn btn-primary btn-block" href="/contact" data-magnetic>Donner un nouvel élan à mon site <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="section" aria-label="Refonte de site web">
+      <div class="container" data-reveal>
+        <header class="section-head">
+          <p class="kicker reveal">Refonte de site web</p>
+          <h2 class="reveal" style="--i:1">Quand penser <span class="grad-text">à une refonte ?</span></h2>
+        </header>
+        <ul class="features">
+          <li class="feature card reveal" style="--i:2"><span class="feature-icon" aria-hidden="true">01</span><h3>Il n'est pas agréable sur téléphone</h3><p>Texte trop petit, boutons trop proches, page qui déborde : vos visiteurs repartent.</p></li>
+          <li class="feature card reveal" style="--i:3"><span class="feature-icon" aria-hidden="true">02</span><h3>Il ne vous ressemble plus</h3><p>Vos services, votre clientèle ou votre image ont évolué, mais pas votre site.</p></li>
+          <li class="feature card reveal" style="--i:4"><span class="feature-icon" aria-hidden="true">03</span><h3>Il ne vous amène aucun contact</h3><p>Un site vitrine doit faire venir des appels et des demandes. S'il reste silencieux, sa structure est à revoir.</p></li>
+        </ul>
+      </div>
+    </section>
+    <section class="section" aria-label="Exemples de réalisations">
+      <div class="container" data-reveal>
+        <header class="section-head">
+          <p class="kicker reveal">Exemples de mes réalisations</p>
+          <h2 class="reveal" style="--i:1">Des projets uniques. <span class="grad-text">Des identités singulières.</span></h2>
+        </header>
+        <ul class="mini-works">
+          <li class="reveal" style="--i:2"><a class="mini-work card" href="/realisations#auto-ecole"><img src="/assets/img/autoecole-720.jpg?v=20261024j" width="1440" height="900" loading="lazy" decoding="async" alt="Page d'accueil du site Auto-école La Tour de Mare"><span class="mini-work-body"><b>Auto-école La Tour de Mare</b><small>Auto-école · Fréjus</small></span></a></li>
+          <li class="reveal" style="--i:3"><a class="mini-work card" href="/realisations#em-concept"><img src="/assets/img/emconcept-720.jpg?v=20261024j" width="1440" height="900" loading="lazy" decoding="async" alt="Page d'accueil du site EM Concept"><span class="mini-work-body"><b>EM Concept</b><small>Électricité &amp; audiovisuel · Var</small></span></a></li>
+          <li class="reveal" style="--i:4"><a class="mini-work card" href="/realisations#annick-taquet-assoignons"><img src="/assets/img/taquet-720.jpg?v=20261024j" width="1440" height="900" loading="lazy" decoding="async" alt="Page d'accueil du site Annick Taquet-Assoignons"><span class="mini-work-body"><b>Annick Taquet-Assoignons</b><small>Psychologue &amp; autrice</small></span></a></li>
+        </ul>
+        <p class="section-more reveal"><a class="btn" href="/realisations">Voir les exemples en détail <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></p>
+      </div>
+    </section>
+    <section class="section" aria-label="Méthode">
+      <div class="container" data-reveal>
+        <header class="section-head">
+          <p class="kicker reveal">Méthode</p>
+          <h2 class="reveal" style="--i:1">Une collaboration claire.<br> <span class="grad-text">Un projet maîtrisé.</span></h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal" style="--i:2"><h3>Comprendre</h3><p>Nous échangeons sur votre activité, votre clientèle, vos objectifs et vos attentes. Cette première étape permet de définir le périmètre du projet et de vous proposer un devis détaillé.</p></li>
+          <li class="step reveal" style="--i:3"><h3>Concevoir</h3><p>Nous définissons la direction artistique, la structure et l'organisation des contenus. L'objectif : trouver le bon équilibre entre identité visuelle, lisibilité et efficacité.</p></li>
+          <li class="step reveal" style="--i:4"><h3>Développer</h3><p>Le site prend forme à partir des choix validés. Je porte une attention particulière à la qualité du rendu, à la navigation sur mobile, aux performances et aux fonctionnalités prévues.</p></li>
+          <li class="step reveal" style="--i:5"><h3>Finaliser &amp; publier</h3><p>Après les vérifications et votre validation, le site est mis en ligne. Nous faisons le point sur son fonctionnement et sur les modalités d'évolution et de suivi.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="section section-alt" aria-labelledby="faq-local-title">
+      <div class="container" data-reveal>
+        <header class="section-head">
+          <p class="kicker reveal">Questions</p>
+          <h2 id="faq-local-title" class="reveal" style="--i:1">Refonte de site web : <span class="grad-text">vos questions.</span></h2>
+        </header>
+        <div class="faq reveal" style="--i:2">
+          <details><summary>Vais-je perdre mon référencement ?</summary><div class="faq-answer"><p>Le référencement existant est pris en compte dès l'analyse : les adresses de vos anciennes pages sont redirigées vers les nouvelles pour préserver ce qui a été construit.</p></div></details>
+          <details><summary>Peut-on garder certains contenus ?</summary><div class="faq-answer"><p>Oui. L'analyse de l'existant permet de choisir ce qui mérite d'être conservé, retravaillé ou remplacé.</p></div></details>
+          <details><summary>Combien coûte une refonte ?</summary><div class="faq-answer"><p>Chaque refonte est sur devis : le prix dépend de l'état du site actuel, du nombre de pages et des contenus à reprendre. Le devis est gratuit et sans engagement.</p></div></details>
+        </div>
+      </div>
+    </section>
+    <section class="section section-alt" aria-label="Autres prestations">
+      <div class="container" data-reveal>
+        <header class="section-head">
+          <p class="kicker reveal">Autres prestations</p>
+          <h2 class="reveal" style="--i:1">Je vous accompagne <span class="grad-text">à chaque étape.</span></h2>
+        </header>
+        <ul class="link-cards">
+          <li class="reveal" style="--i:2"><a class="link-card card" href="/creation-site-web"><b>Création de site web</b><small>Construisez une présence en ligne qui inspire confiance.</small><span class="link-arrow">Découvrir <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a></li>
+          <li class="reveal" style="--i:3"><a class="link-card card" href="/suivi-site-web"><b>Suivi &amp; évolutions</b><small>Un site vivant, qui accompagne votre développement.</small><span class="link-arrow">Découvrir <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="section" aria-label="Contact">
+      <div class="container" data-reveal>
+        <div class="contact-card cta-card reveal">
+          <div>
+            <p class="kicker kicker-left">Contact</p>
+            <h2>Votre prochain projet commence par <span class="grad-text">une rencontre.</span></h2>
+            <p>Un premier échange pour faire émerger les bonnes idées.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="/contact" data-magnetic>Parlons de votre projet <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a class="link-arrow cta-tel" href="tel:+33674887585">06 74 88 75 85</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-explore">
+      <div class="footer-about">
+        <a class="brand" href="/"><span class="brand-text"><strong>Julien Bourgois</strong><small>Studio de création web — Design digital</small></span></a>
+        <p>Sites vitrines sur mesure pour les artisans, artistes, indépendants et petites entreprises, à Fréjus, Saint-Raphaël et au-delà.</p>
+        <ul>
+          <li><a href="tel:+33674887585">06 74 88 75 85</a></li>
+          <li><a class="footer-wa" href="https://wa.me/33674887585" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp<span class="visually-hidden"> (nouvel onglet)</span></a></li>
+          <li><a href="mailto:bourgois.ju@gmail.com">bourgois.ju@gmail.com</a></li>
+        </ul>
+      </div>
+      <nav class="footer-cols" aria-label="Plan du site">
+        <div>
+          <p class="footer-title">Prestations</p>
+          <ul>
+            <li><a href="/creation-site-web">Création de site web</a></li>
+            <li><a href="/refonte-site-web">Refonte de site web</a></li>
+            <li><a href="/suivi-site-web">Suivi &amp; évolutions</a></li>
+            <li><a href="/prestations#methode">Méthode</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Pour qui</p>
+          <ul>
+            <li><a href="/site-vitrine-artisans">Artisans</a></li>
+            <li><a href="/site-vitrine-artistes">Artistes &amp; auteurs</a></li>
+            <li><a href="/site-vitrine-independants">Indépendants &amp; libéraux</a></li>
+            <li><a href="/site-vitrine-petites-entreprises">Petites entreprises</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Zones</p>
+          <ul>
+            <li><a href="/creation-site-vitrine-frejus">Site vitrine à Fréjus</a></li>
+            <li><a href="/creation-site-vitrine-saint-raphael">Site vitrine à Saint-Raphaël</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Ressources</p>
+          <ul>
+            <li><a href="/realisations">Exemples de mes réalisations</a></li>
+            <li><a href="/qui-je-suis">Qui suis-je</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#faq">Questions fréquentes</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Julien Bourgois — Studio de création web, design digital</p>
+      <a href="#main">Haut de page ↑</a>
+    </div>
+  </footer>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.4 20.6 4.7 16A8.9 8.9 0 1 1 8 19.3z"/><path d="M9 8.3c.2-.5.6-.6.9-.6h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .5-.1.6l-.5.6c-.1.2-.1.4 0 .5a6 6 0 0 0 2.6 2.4c.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5 0 .5-.2 1.2-.8 1.5-.6.4-1.7.5-3.3-.2a9.4 9.4 0 0 1-4.3-4.3C8.6 10.1 8.7 9 9 8.3z" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+  </svg>
+</body>
+</html>

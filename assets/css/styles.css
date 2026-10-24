@@ -784,3 +784,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .footer-explore { grid-template-columns: 1fr; }
   .footer-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* Service pages: description beside the "what's included" card */
+.service-split { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.service-split .prose { max-width: none; }
+.service-split .prose > h2:first-child { margin-top: 0; }
+.service-split .offer { position: sticky; top: 104px; }
+.offer-title { font-size: clamp(1.3rem, 1.7vw, 1.55rem); line-height: 1.2; letter-spacing: -.015em; }
+.offer-more { justify-self: start; }
+@media (max-width: 960px) { .service-split { grid-template-columns: 1fr; } .service-split .offer { position: static; } }
